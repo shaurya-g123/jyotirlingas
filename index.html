@@ -1,0 +1,3442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12 Jyotirlingas: Lords of Planets & Rashis</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #F0D080;
+      --gold-pale: #F7E9C0;
+      --copper: #B87333;
+      --deep-maroon: #1A0A0A;
+      --maroon: #3D0C0C;
+      --maroon-mid: #5C1A1A;
+      --saffron: #FF6B1A;
+      --saffron-light: #FFB347;
+      --cream: #FDF5E6;
+      --ash: #E8DCC8;
+      --dark-bg: #0D0505;
+      --text-body: #3A2A1A;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      color: var(--cream);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* === HERO === */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 168, 76, 0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 80% 100%, rgba(255, 107, 26, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(184, 115, 51, 0.10) 0%, transparent 60%),
+        linear-gradient(180deg, #120404 0%, #0D0505 40%, #1A0808 100%);
+      z-index: 0;
+    }
+
+    .mandala-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      opacity: 0.05;
+      background-image:
+        repeating-conic-gradient(from 0deg, var(--gold) 0deg 2deg, transparent 2deg 30deg),
+        repeating-conic-gradient(from 15deg, var(--copper) 0deg 1deg, transparent 1deg 30deg);
+      border-radius: 50%;
+      animation: slowSpin 80s linear infinite;
+    }
+
+    @keyframes slowSpin {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    .om-symbol {
+      font-size: 72px;
+      color: var(--gold);
+      opacity: 0.9;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 0 40px rgba(201, 168, 76, 0.6), 0 0 80px rgba(201, 168, 76, 0.3);
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+
+      0%,
+      100% {
+        text-shadow: 0 0 40px rgba(201, 168, 76, 0.6), 0 0 80px rgba(201, 168, 76, 0.3);
+      }
+
+      50% {
+        text-shadow: 0 0 60px rgba(201, 168, 76, 0.9), 0 0 120px rgba(201, 168, 76, 0.5);
+      }
+    }
+
+    .hero-tag {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      opacity: 0.9;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(28px, 5vw, 58px);
+      font-weight: 900;
+      color: var(--gold-light);
+      line-height: 1.2;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 20px rgba(201, 168, 76, 0.4);
+      max-width: 900px;
+      margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(13px, 2vw, 18px);
+      color: var(--gold);
+      opacity: 0.8;
+      letter-spacing: 3px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 30px;
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 36px;
+    }
+
+    .hero-divider span {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .hero-divider span:last-child {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .hero-divider em {
+      color: var(--gold);
+      font-size: 20px;
+      font-style: normal;
+    }
+
+    .hero-intro {
+      max-width: 700px;
+      font-size: 19px;
+      color: var(--ash);
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+      line-height: 1.9;
+      opacity: 0.9;
+    }
+
+    /* === SCROLL INDICATOR === */
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      opacity: 0.5;
+      animation: fadeUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeUpDown {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.5;
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(8px);
+        opacity: 0.9;
+      }
+    }
+
+    /* === LAYOUT === */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* === SECTION HEADERS === */
+    .section-header {
+      text-align: center;
+      padding: 80px 24px 50px;
+    }
+
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    .section-header h2 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(22px, 3.5vw, 36px);
+      color: var(--gold-light);
+      line-height: 1.3;
+      text-shadow: 0 0 30px rgba(201, 168, 76, 0.3);
+    }
+
+    /* === INTRO BLOCK === */
+    .intro-block {
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.06) 0%, rgba(184, 115, 51, 0.04) 100%);
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      border-left: 4px solid var(--gold);
+      padding: 40px 44px;
+      margin: 0 auto 60px;
+      max-width: 900px;
+      position: relative;
+    }
+
+    .intro-block::before {
+      content: '॥';
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 28px;
+      color: var(--gold);
+      background: var(--dark-bg);
+      padding: 0 12px;
+    }
+
+    .intro-block p {
+      font-size: 18.5px;
+      color: var(--ash);
+      line-height: 1.95;
+      margin-bottom: 16px;
+    }
+
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .verse-block {
+      text-align: center;
+      padding: 30px 20px;
+      margin: 40px auto;
+      max-width: 700px;
+      border-top: 1px solid rgba(201, 168, 76, 0.2);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+
+    .verse-block p {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      color: var(--gold);
+      letter-spacing: 1px;
+      line-height: 2;
+      font-style: italic;
+    }
+
+    .verse-block .translation {
+      font-family: 'EB Garamond', serif;
+      font-size: 15px;
+      color: var(--ash);
+      opacity: 0.7;
+      margin-top: 12px;
+      letter-spacing: 0;
+      font-style: italic;
+    }
+
+    /* === JYOTIRLINGA CARDS === */
+    .jyotirlinga-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    .jl-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+      transition: background 0.3s;
+    }
+
+    .jl-card:hover {
+      background: rgba(201, 168, 76, 0.03);
+    }
+
+    .jl-left {
+      padding: 40px 24px 40px 0;
+      border-right: 2px solid rgba(201, 168, 76, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 12px;
+      position: relative;
+    }
+
+    .jl-number {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 48px;
+      color: rgba(201, 168, 76, 0.12);
+      line-height: 1;
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
+
+    .jl-name {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 17px;
+      color: var(--gold-light);
+      text-align: right;
+      line-height: 1.3;
+    }
+
+    .jl-location {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      text-align: right;
+      opacity: 0.8;
+    }
+
+    .planet-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: flex-end;
+      margin-top: 8px;
+    }
+
+    .planet-icon {
+      font-size: 22px;
+    }
+
+    .planet-name {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid;
+      border-radius: 2px;
+    }
+
+    .rashi-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+      margin-top: 4px;
+    }
+
+    .rashi-pill {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      padding: 3px 10px;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      color: var(--gold-pale);
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    .jl-right {
+      padding: 40px 0 40px 36px;
+    }
+
+    .jl-right h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      opacity: 0.7;
+    }
+
+    .jl-right .lore {
+      font-size: 17px;
+      color: var(--ash);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .analysis-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .tab-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.5;
+      padding: 6px 0;
+      margin-right: 24px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tab-label.active {
+      opacity: 1;
+      border-bottom-color: var(--gold);
+    }
+
+    .analysis-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .analysis-item {
+      padding: 16px 18px;
+      border: 1px solid rgba(201, 168, 76, 0.12);
+      border-radius: 2px;
+    }
+
+    .analysis-item .label {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 8px;
+      opacity: 0.8;
+    }
+
+    .analysis-item p {
+      font-size: 15px;
+      color: var(--ash);
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    /* === WHY PLANET / WHY RASHI === */
+    .reason-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .reason-item {
+      padding: 16px 18px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .reason-item.planet-reason {
+      border: 1px solid rgba(240, 208, 128, 0.18);
+      border-left: 3px solid var(--gold);
+    }
+
+    .reason-item.rashi-reason {
+      border: 1px solid rgba(255, 107, 26, 0.18);
+      border-left: 3px solid var(--saffron);
+    }
+
+    .reason-item .label {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      opacity: 0.85;
+    }
+
+    .planet-reason .label {
+      color: var(--gold-light);
+    }
+
+    .rashi-reason .label {
+      color: var(--saffron-light);
+    }
+
+    .reason-item p {
+      font-size: 15px;
+      color: var(--ash);
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    /* === SACRED STORY BOX === */
+    .story-box {
+      margin-top: 20px;
+      padding: 24px 26px;
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.06) 0%, rgba(13, 5, 5, 0.4) 100%);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-top: 3px solid var(--copper);
+      position: relative;
+    }
+
+    .story-box::before {
+      content: '📖';
+      position: absolute;
+      top: -14px;
+      left: 20px;
+      font-size: 20px;
+      background: var(--dark-bg);
+      padding: 0 6px;
+    }
+
+    .story-label {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 12px;
+      opacity: 0.9;
+    }
+
+    .story-box p {
+      font-size: 15.5px;
+      color: var(--ash);
+      line-height: 1.85;
+      opacity: 0.88;
+      font-style: italic;
+    }
+
+    .story-box p em {
+      font-style: normal;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* === PLANET COLORS === */
+    .moon {
+      color: #A8C4E0;
+      border-color: #A8C4E0;
+    }
+
+    .venus {
+      color: #F4B8D4;
+      border-color: #F4B8D4;
+    }
+
+    .saturn {
+      color: #8B8FA8;
+      border-color: #8B8FA8;
+    }
+
+    .mercury {
+      color: #90D4A0;
+      border-color: #90D4A0;
+    }
+
+    .mars {
+      color: #E07060;
+      border-color: #E07060;
+    }
+
+    .sun {
+      color: #F4A830;
+      border-color: #F4A830;
+    }
+
+    .jupiter {
+      color: #F0D080;
+      border-color: #F0D080;
+    }
+
+    .rahu {
+      color: #B090C8;
+      border-color: #B090C8;
+    }
+
+    .ketu {
+      color: #C0A880;
+      border-color: #C0A880;
+    }
+
+    /* === SYNTHESIS SECTION === */
+    .synthesis {
+      background: linear-gradient(180deg, rgba(201, 168, 76, 0.04) 0%, transparent 100%);
+      border-top: 1px solid rgba(201, 168, 76, 0.15);
+      padding: 80px 24px;
+    }
+
+    .synthesis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .synth-card {
+      padding: 32px 28px;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      border-top: 3px solid var(--gold);
+      background: rgba(201, 168, 76, 0.04);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .synth-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 168, 76, 0.35);
+    }
+
+    .synth-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .synth-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .synth-card p {
+      font-size: 16px;
+      color: var(--ash);
+      line-height: 1.8;
+      opacity: 0.85;
+    }
+
+    /* === REFERENCE SECTION === */
+    .references {
+      padding: 60px 24px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .references h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 30px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+
+    .ref-list {
+      list-style: none;
+      counter-reset: ref-counter;
+    }
+
+    .ref-list li {
+      counter-increment: ref-counter;
+      padding: 12px 0 12px 36px;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+      font-size: 15px;
+      color: var(--ash);
+      opacity: 0.8;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .ref-list li::before {
+      content: counter(ref-counter);
+      position: absolute;
+      left: 0;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      color: var(--gold);
+      opacity: 0.6;
+      top: 14px;
+    }
+
+    /* === FOOTER === */
+    .footer {
+      text-align: center;
+      padding: 50px 24px;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .footer p {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      opacity: 0.4;
+      text-transform: uppercase;
+    }
+
+    /* === PLANETARY TABLE === */
+    .planet-table-wrap {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    thead tr {
+      background: rgba(201, 168, 76, 0.12);
+      border-bottom: 2px solid rgba(201, 168, 76, 0.3);
+    }
+
+    th {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 14px 16px;
+      text-align: left;
+    }
+
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+      color: var(--ash);
+      vertical-align: middle;
+    }
+
+    tr:hover td {
+      background: rgba(201, 168, 76, 0.04);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 680px) {
+      .jl-card {
+        grid-template-columns: 1fr;
+      }
+
+      .jl-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        padding: 30px 0 20px;
+        align-items: flex-start;
+      }
+
+      .jl-name,
+      .jl-location {
+        text-align: left;
+      }
+
+      .planet-badge {
+        justify-content: flex-start;
+      }
+
+      .rashi-pills {
+        justify-content: flex-start;
+      }
+
+      .jl-right {
+        padding: 24px 0;
+      }
+
+      .analysis-box {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-block {
+        padding: 28px 20px;
+      }
+    }
+
+
+    /* ========================================
+     TIMELINE
+  ======================================== */
+    .timeline-wrap {
+      margin-top: 22px;
+    }
+
+    .tl-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid rgba(201, 168, 76, 0.22);
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 9px 18px;
+      transition: all 0.2s;
+      opacity: 0.65;
+    }
+
+    .tl-toggle:hover {
+      opacity: 1;
+      border-color: rgba(201, 168, 76, 0.55);
+    }
+
+    .tl-arrow {
+      transition: transform 0.3s;
+      display: inline-block;
+      font-style: normal;
+    }
+
+    .tl-toggle.open .tl-arrow {
+      transform: rotate(90deg);
+    }
+
+    .tl-body {
+      display: none;
+      overflow-x: auto;
+      margin-top: 14px;
+      padding-bottom: 10px;
+    }
+
+    .tl-body.open {
+      display: block;
+    }
+
+    .tl-track {
+      display: flex;
+      min-width: max-content;
+      padding: 10px 0 18px;
+      position: relative;
+      align-items: flex-start;
+    }
+
+    .tl-track::after {
+      content: '';
+      position: absolute;
+      top: 37px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(201, 168, 76, 0.22) 8%, rgba(201, 168, 76, 0.22) 92%, transparent 100%);
+    }
+
+    .tl-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 150px;
+      padding: 0 14px;
+      position: relative;
+    }
+
+    .tl-dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: var(--dark-bg);
+      margin: 30px auto 10px;
+      z-index: 1;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .tl-dot:hover {
+      transform: scale(1.5);
+    }
+
+    .tl-dot.destruction {
+      border-color: #E07060;
+      box-shadow: 0 0 7px rgba(224, 112, 96, 0.5);
+    }
+
+    .tl-dot.rebuild {
+      border-color: #90D4A0;
+      box-shadow: 0 0 7px rgba(144, 212, 160, 0.5);
+    }
+
+    .tl-dot.ancient {
+      border-color: var(--gold);
+      box-shadow: 0 0 7px rgba(201, 168, 76, 0.5);
+    }
+
+    .tl-dot.modern {
+      border-color: #A8C4E0;
+      box-shadow: 0 0 7px rgba(168, 196, 224, 0.5);
+    }
+
+    .tl-year {
+      font-family: 'Cinzel', serif;
+      font-size: 9.5px;
+      color: var(--gold-light);
+      margin-bottom: 5px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .tl-text {
+      font-size: 12px;
+      color: var(--ash);
+      opacity: 0.72;
+      text-align: center;
+      line-height: 1.5;
+      max-width: 130px;
+    }
+
+    .tl-legend {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+      padding-left: 2px;
+    }
+
+    .tll-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--ash);
+      opacity: 0.5;
+    }
+
+    .tll-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid;
+    }
+
+    /* ========================================
+     BEFORE / AFTER
+  ======================================== */
+    .before-after {
+      margin-top: 22px;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      overflow: hidden;
+    }
+
+    .ba-tabs {
+      display: flex;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .ba-tab {
+      flex: 1;
+      padding: 11px 12px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ash);
+      opacity: 0.42;
+      transition: all 0.2s;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+    }
+
+    .ba-tab.active {
+      opacity: 1;
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+      background: rgba(201, 168, 76, 0.04);
+    }
+
+    .ba-content {
+      display: none;
+      padding: 20px 22px;
+    }
+
+    .ba-content.active {
+      display: block;
+    }
+
+    .ba-tag {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .ba-content.ancient-view .ba-tag {
+      color: var(--copper);
+    }
+
+    .ba-content.modern-view .ba-tag {
+      color: #A8C4E0;
+    }
+
+    .ba-content p {
+      font-size: 15px;
+      color: var(--ash);
+      line-height: 1.88;
+      opacity: 0.87;
+      font-style: italic;
+    }
+
+    /* ========================================
+     MEDITATION SECTION
+  ======================================== */
+    .meditation-section {
+      padding: 80px 0 60px;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+      background: linear-gradient(180deg, rgba(13, 5, 5, 0) 0%, rgba(201, 168, 76, 0.025) 50%, rgba(13, 5, 5, 0) 100%);
+    }
+
+    .med-intro {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+      padding: 0 24px;
+      font-size: 17px;
+      color: var(--ash);
+      opacity: 0.82;
+      line-height: 1.9;
+    }
+
+    .med-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 22px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .med-card {
+      background: rgba(201, 168, 76, 0.03);
+      border: 1px solid rgba(201, 168, 76, 0.13);
+      border-top: 3px solid var(--gold);
+      padding: 24px 22px 20px;
+      transition: transform 0.3s;
+    }
+
+    .med-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .med-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .med-num {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 24px;
+      color: var(--gold);
+      opacity: 0.22;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .med-title {
+      flex: 1;
+    }
+
+    .med-title h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 13.5px;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+
+    .med-planet-lbl {
+      font-size: 12px;
+      color: var(--saffron-light);
+      opacity: 0.6;
+    }
+
+    .med-row {
+      margin-bottom: 13px;
+    }
+
+    .med-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.48;
+      margin-bottom: 4px;
+    }
+
+    .med-val {
+      font-size: 14px;
+      color: var(--ash);
+      line-height: 1.65;
+      opacity: 0.85;
+    }
+
+    .med-mantra {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+      padding: 9px 13px;
+      border-left: 2px solid var(--gold);
+      background: rgba(201, 168, 76, 0.07);
+      margin-top: 4px;
+      line-height: 1.8;
+    }
+
+    .med-heal {
+      font-size: 13px;
+      color: var(--ash);
+      line-height: 1.6;
+      opacity: 0.72;
+      font-style: italic;
+    }
+
+    /* ── Language Toggle ─────────────────────────────── */
+    @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap');
+
+    .lang-toggle-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 8px 22px;
+      background: linear-gradient(90deg, transparent 0%, rgba(13, 5, 5, 0.92) 30%);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+    }
+
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid rgba(201, 168, 76, 0.35);
+      border-radius: 2px;
+      overflow: hidden;
+      background: none;
+    }
+
+    .lang-opt {
+      padding: 7px 18px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ash);
+      opacity: 0.42;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+
+    .lang-opt.active {
+      background: rgba(201, 168, 76, 0.15);
+      color: var(--gold);
+      opacity: 1;
+    }
+
+    .lang-opt:first-child {
+      border-right: 1px solid rgba(201, 168, 76, 0.25);
+    }
+
+    .lang-divider-dot {
+      color: var(--gold);
+      opacity: 0.3;
+      font-size: 16px;
+      margin: 0 4px;
+    }
+
+    /* Hindi font override */
+    [lang="hi"] body,
+    [lang="hi"] .hi-text {
+      font-family: 'Tiro Devanagari Sanskrit', 'Noto Serif Devanagari', serif;
+    }
+
+    /* Bilingual show/hide */
+    .en {
+      display: inline;
+    }
+
+    .hi {
+      display: none;
+    }
+
+    [lang="hi"] .en {
+      display: none;
+    }
+
+    [lang="hi"] .hi {
+      display: inline;
+    }
+
+    /* Block-level variants */
+    .en-block {
+      display: block;
+    }
+
+    .hi-block {
+      display: none;
+    }
+
+    [lang="hi"] .en-block {
+      display: none;
+    }
+
+    [lang="hi"] .hi-block {
+      display: block;
+    }
+
+    /* Push body below sticky bar */
+    body {
+      padding-top: 42px;
+    }
+
+    /* ── References categories ───────────────────────── */
+    .ref-category {
+      margin-top: 38px;
+      margin-bottom: 6px;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      opacity: 0.7;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 107, 26, 0.15);
+    }
+
+    .ref-category .hi {
+      font-family: 'Tiro Devanagari Sanskrit', serif;
+      letter-spacing: 0;
+      font-size: 11px;
+    }
+
+    .ref-quote {
+      font-style: italic;
+      font-size: 14px;
+      color: var(--gold-light);
+      padding: 10px 16px;
+      margin: 10px 0 4px;
+      border-left: 2px solid rgba(201, 168, 76, 0.3);
+      opacity: 0.75;
+      line-height: 1.75;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="lang-toggle-bar">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span
+        style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;color:var(--ash);opacity:0.35;text-transform:uppercase;">Language</span>
+      <div class="lang-btn" role="group" aria-label="Language selector">
+        <button class="lang-opt active" id="btn-en" onclick="setLang('en')">English</button>
+        <button class="lang-opt" id="btn-hi" onclick="setLang('hi')">हिन्दी</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="mandala-bg"></div>
+    <div class="om-symbol">ॐ</div>
+    <p class="hero-tag"><span class="en">Sacred Jyotish Analysis</span><span class="hi">पवित्र ज्योतिष विश्लेषण</span>
+    </p>
+    <h1>12 Jyotirlingas:<br />Lords of Planets & Rashis</h1>
+    <p class="hero-subtitle"><span class="en">Grahas · Rashis · Cosmic Consciousness</span><span class="hi">ग्रह · राशि
+        · ब्रह्माण्डीय चेतना</span></p>
+    <div class="hero-divider">
+      <span></span>
+      <em>✦</em>
+      <span></span>
+    </div>
+    <p class="hero-intro">
+      <span class="en">Every Jyotirlinga is not merely a temple - it is a cosmic portal where Shiva's infinite light
+        (jyoti) descends into form, anchoring the energies of specific planets and zodiac signs into the geography of
+        sacred Bharat.</span><span class="hi">प्रत्येक ज्योतिर्लिंग केवल एक मंदिर नहीं - यह एक ब्रह्माण्डीय द्वार है
+        जहाँ शिव का अनंत प्रकाश (ज्योति) स्वरूप धारण करता है, विशिष्ट ग्रहों और राशियों की ऊर्जाओं को पवित्र भारत की
+        भूमि में स्थापित करता है।</span>
+    </p>
+    <div class="scroll-down">
+      <span><span class="en">SCROLL</span><span class="hi">नीचे</span></span>
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label"><span class="en">The Sacred Context</span><span class="hi">पवित्र संदर्भ</span></p>
+      <h2><span class="en">Why Shiva Rules the Cosmos</span><span class="hi">शिव क्यों ब्रह्माण्ड के स्वामी हैं</span>
+      </h2>
+    </div>
+    <div class="intro-block">
+      <p>
+        In the Shaiva Agamas and classical Jyotish texts - particularly the <em>Shiva Purana</em>, <em>Linga
+          Purana</em>, and <em>Skanda Purana</em> - the 12 Jyotirlingas are described not merely as holy sites but as
+        cosmic axes of planetary energy. Each linga is said to be a self-manifested (svayambhu) column of divine light,
+        and each governs a specific graha (planet) and its associated rashis (zodiac signs).
+      </p>
+      <p>
+        This is the foundational secret of Hindu astrology: the landscape of India itself is a living horoscope, and
+        pilgrimage to these shrines is a form of planetary propitiation. When you stand before Somnath, you stand before
+        the Moon. When you circle Mahakaleshwar, you orbit Saturn. The entire cosmos folds into geography, and geography
+        into devotion.
+      </p>
+      <p>
+        This analysis draws from traditional Jyotish assignments, Puranic narratives, the <em>Dvadasha Jyotirlinga
+          Stotram</em> by Adi Shankaracharya, and contemporary Shaivite scholarship to explore each Jyotirlinga's
+        planetary lordship, its associated rashis, its emotional depth, and its cosmological significance.
+      </p>
+    </div>
+
+    <div class="verse-block">
+      <p>सौराष्ट्रे सोमनाथं च श्रीशैले मल्लिकार्जुनम्।<br>
+        उज्जयिन्यां महाकालम् ओमकारं ममलेश्वरम॥<br>
+        परल्यां वैद्यनाथं च डाकिन्यां भीमशङ्करम् ।<br>
+        सेतुबन्धे तु रामेशं नागेशं दारुकावने ॥<br>
+        वारणस्यां तु विश्वेशं त्र्यम्बकं गौतमीतटे ।<br>
+        हिमालये तु केदारं घुश्मेशं च शिवालये ॥<br>
+        एतानि ज्योतिर्लिङ्गानि सायं प्रातः पठेन्नरः ।<br>
+        सप्तजन्मकृतं पापं स्मरणेन विनश्यति ॥
+
+
+
+      </p>
+      <p class="translation">- Dvadasha Jyotirlinga Stotram, Adi Shankaracharya (8th century CE)<br />
+        "I bow down and take refugee in Somnath in Saurashtra, Mallikarjuna at Srisailam, Mahakal at Ujjain, Omkareshwar
+        and Mamleshwara, Vaidyanath, Bhimashankar, Rameshwaram, Nageshwar, Vishwanath, Triambakeshwar, Kedarnath,
+        Grishneshwar"<br><br>
+
+        Reciting the names of these 12 Jyotirlingas in the morning and evening destroys all sins committed in seven
+        lifetimes, as stated in the concluding verse. It brings inner peace, mental strength, and total liberation
+
+      </p>
+    </div>
+  </div>
+
+
+
+  <!-- QUICK REFERENCE TABLE -->
+  <div class="planet-table-wrap">
+    <div class="section-header" style="padding-top:20px;">
+      <p class="section-label"><span class="en">Quick Reference</span><span class="hi">त्वरित संदर्भ</span></p>
+      <h2><span class="en">The Sacred Correspondence Matrix</span><span class="hi">पवित्र ग्रह-राशि तालिका</span></h2>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><span class="en">Jyotirlinga</span><span class="hi">ज्योतिर्लिंग</span></th>
+          <th><span class="en">Location</span><span class="hi">स्थान</span></th>
+          <th><span class="en">Planet (Graha)</span><span class="hi">ग्रह</span></th>
+          <th><span class="en">Rashi (Zodiac)</span><span class="hi">राशि</span></th>
+          <th><span class="en">Element</span><span class="hi">तत्व</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong style="color:var(--gold-light)">Somnath</strong></td>
+          <td>Prabhas Patan, Gujarat</td>
+          <td><span class="dot" style="background:#A8C4E0"></span>Moon (Chandra)</td>
+          <td>Cancer, Taurus</td>
+          <td>Water</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong style="color:var(--gold-light)">Mallikarjuna</strong></td>
+          <td>Srisailam, Andhra Pradesh</td>
+          <td><span class="dot" style="background:#F4B8D4"></span>Venus (Shukra)</td>
+          <td>Taurus, Libra</td>
+          <td>Earth/Air</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong style="color:var(--gold-light)">Mahakaleshwar</strong></td>
+          <td>Ujjain, Madhya Pradesh</td>
+          <td><span class="dot" style="background:#8B8FA8"></span>Saturn (Shani)</td>
+          <td>Capricorn, Aquarius</td>
+          <td>Earth/Air</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong style="color:var(--gold-light)">Omkareshwar</strong></td>
+          <td>Mandhata Island, Madhya Pradesh</td>
+          <td><span class="dot" style="background:#90D4A0"></span>Mercury (Budh)</td>
+          <td>Gemini, Virgo</td>
+          <td>Earth</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><strong style="color:var(--gold-light)">Kedarnath</strong></td>
+          <td>Rudraprayag, Uttarakhand</td>
+          <td><span class="dot" style="background:#E07060"></span>Mars (Mangal)</td>
+          <td>Aries, Scorpio</td>
+          <td>Fire</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><strong style="color:var(--gold-light)">Bhimashankar</strong></td>
+          <td>Pune, Maharashtra</td>
+          <td><span class="dot" style="background:#F4A830"></span>Sun (Surya)</td>
+          <td>Leo</td>
+          <td>Fire</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><strong style="color:var(--gold-light)">Kashi Vishwanath</strong></td>
+          <td>Varanasi, Uttar Pradesh</td>
+          <td><span class="dot" style="background:#F0D080"></span>Jupiter (Guru)</td>
+          <td>Sagittarius, Pisces</td>
+          <td>Ether/Fire</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><strong style="color:var(--gold-light)">Trimbakeshwar</strong></td>
+          <td>Nashik, Maharashtra</td>
+          <td><span class="dot" style="background:#B090C8"></span>Rahu</td>
+          <td>Aquarius, Virgo</td>
+          <td>Air</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><strong style="color:var(--gold-light)">Vaidyanath</strong></td>
+          <td>Deoghar, Jharkhand</td>
+          <td><span class="dot" style="background:#C0A880"></span>Ketu</td>
+          <td>Scorpio, Pisces</td>
+          <td>Fire/Water</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><strong style="color:var(--gold-light)">Nageshwar</strong></td>
+          <td>Dwarka, Gujarat</td>
+          <td><span class="dot" style="background:#B090C8"></span>Rahu/Saturn</td>
+          <td>Aquarius, Capricorn</td>
+          <td>Air</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td><strong style="color:var(--gold-light)">Rameshwaram</strong></td>
+          <td>Rameswaram, Tamil Nadu</td>
+          <td><span class="dot" style="background:#F4A830"></span>Sun (Surya)</td>
+          <td>Aries, Leo</td>
+          <td>Fire</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><strong style="color:var(--gold-light)">Grishneshwar</strong></td>
+          <td>Aurangabad, Maharashtra</td>
+          <td><span class="dot" style="background:#F4B8D4"></span>Venus/Ketu</td>
+          <td>Libra, Pisces</td>
+          <td>Air/Water</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DETAILED JYOTIRLINGA ANALYSIS -->
+  <div style="max-width:1000px; margin:0 auto; padding:0 0 20px;">
+    <div class="section-header">
+      <p class="section-label"><span class="en">Deep Analysis</span><span class="hi">गहन विश्लेषण</span></p>
+      <h2><span class="en">Each Jyotirlinga Unveiled</span><span class="hi">प्रत्येक ज्योतिर्लिंग का रहस्योद्घाटन</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="jyotirlinga-grid">
+
+    <!-- 1. SOMNATH -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">01</span>
+        <div class="jl-name">Somnath</div>
+        <div class="jl-location">Prabhas Patan · Gujarat</div>
+        <div class="planet-badge">
+          <span class="planet-icon">🌙</span>
+          <span class="planet-name moon">Chandra · Moon</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Cancer</span>
+          <span class="rashi-pill">Taurus</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The Eternal First Jyotirlinga</span><span class="hi">प्रथम शाश्वत ज्योतिर्लिंग</span></h3>
+        <p class="lore">
+          Soma - the Moon - built this temple in gold after being cursed by his father-in-law Daksha to progressively
+          wane (the origin of lunar phases). By worshipping Shiva here, Soma regained his brilliance, but never fully -
+          thus the Moon waxes and wanes eternally. Somnath literally means "Lord of Soma (the Moon)." The Shiva Purana
+          names it the first and most ancient of all Jyotirlingas, located where the sea, river, and divine light
+          converge.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>The Moon rules Cancer (mool-trikon) and is exalted in Taurus at 3°. Somnath governs mind, emotions,
+              mother, and tides. In Jyotish, Chandra represents the <em>manas</em> (mind). Somnath is thus the supreme
+              remedy for mental afflictions, depression, maternal grief, and tidal instability of the psyche. Offering
+              water (jal abhishek) to Shiva here is astronomically resonant - the temple faces the ocean where the Moon
+              controls tides.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">💙 Emotional Analysis</span><span class="hi">💙 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Somnath carries the grief of a god who loved too much and was punished for it. Soma's curse is every
+              human's experience of losing what nourishes us. The emotional landscape here is one of <em>yearning, loss,
+                and rebirth</em>. Pilgrims with broken hearts, maternal sorrow, or turbulent minds find in Somnath a
+              Shiva who heals not by logic - but by <em>holding the wound</em> until it becomes light.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why the Moon (Chandra)?</span><span class="hi">🪐 चन्द्र (सोम) का
+                रहस्य</span></div>
+            <p>The name Somnath literally means <em>"Lord of Soma"</em> - and Soma is the Moon. Chandra built this
+              shrine in gold after being cursed to wane. By worshipping Shiva here, the Moon regained partial light -
+              making Somnath the origin point of the lunar cycle itself. No other Jyotirlinga is named after the planet
+              it governs: the Moon's identity is permanently fused with this sacred place.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Cancer &amp; Taurus?</span><span class="hi">♈ कर्क और वृष
+                राशि</span></div>
+            <p><em>Cancer</em> is the Moon's own sign - the seat of emotions, mothering, home, and the cyclical tides of
+              the psyche. <em>Taurus</em> is where the Moon reaches its highest exaltation (3°) - the point of maximum
+              nourishment and stability. Somnath sits on the Arabian Sea, where tides - Moon's most visible earthly
+              power - reach their fullest expression. Worshipping here heals all Cancer and Taurus afflictions in the
+              birth chart.</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The Curse That Created the Moon's Rhythm</span><span
+              class="hi">पवित्र कथा · वह शाप जिसने चंद्रमा की लय रची</span></div>
+          <p>
+            Long before humans walked the earth, the Moon - called Soma - was married to the 27 daughters of Daksha, the
+            creator-god. They were the 27 Nakshatras, the lunar mansions. But Soma loved only one: <em>Rohini</em>, the
+            most beautiful. He visited the others only in name, spending night after night in Rohini's company. The
+            other 26 wives wept. They told their father Daksha. Daksha warned the Moon three times. The Moon could not
+            stop. Daksha cursed him: <em>"You shall wane away to nothing."</em>
+            <br><br>
+            The Moon began to disappear, a little each night. The world grew dark. Plants wilted. The nectar of life
+            dried up. Even the gods were terrified - for the Moon carries Amrit (the nectar of immortality) in its
+            vessel. They went to Brahma, who sent them all to Shiva. At Prabhasa Kshetra - the land where the rivers
+            meet the sea - the Moon bathed in sacred water, built a temple of pure gold, and performed penance for
+            years.
+            <br><br>
+            Shiva appeared. He could not fully undo Daksha's curse - karma must be honoured. But he said: <em>"You will
+              not die. You will wax and wane, wax and wane - for fifteen nights growing, fifteen nights fading. But you
+              will never vanish entirely. I will live in you, and be called Somnath - your Lord."</em>
+            <br><br>
+            And so the Moon's rhythm was born - not from astronomy, but from a love that went too far, a curse justly
+            given, and a god merciful enough to save what could be saved.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. MALLIKARJUNA -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">02</span>
+        <div class="jl-name">Mallikarjuna</div>
+        <div class="jl-location">Srisailam · Andhra Pradesh</div>
+        <div class="planet-badge">
+          <span class="planet-icon">♀</span>
+          <span class="planet-name venus">Shukra · Venus</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Taurus</span>
+          <span class="rashi-pill">Libra</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The Mountain of Divine Love</span><span class="hi">दिव्य प्रेम का पर्वत</span></h3>
+        <p class="lore">
+          Srisailam is the mountain where Shiva (Mallikarjuna - "Arjuna of jasmine") and Parvati (Bhramaramba) reside
+          together eternally as householders. This dual temple - one of only four Jyotirlingas paired with a Shakti
+          Peetha - vibrates with Venusian energy: beauty, sensuality, creative devotion, and sacred partnership. The
+          jasmine flower (mallika) - Venus's flower - consecrates the union.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Venus rules Taurus (exaltation at 27°) and Libra. It governs beauty, arts, relationships, fertility, and
+              material abundance. Shukra is the Guru of the Asuras and the master of Mritasanjivani - the art of
+              reviving the dead. Mallikarjuna worship is prescribed in Jyotish for Venusian afflictions: troubled
+              marriages, artistic blocks, infertility, and imbalances in Taurus/Libra placements. The hill's forest
+              ecology mirrors Venus's love of lush, sensuous nature.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">💛 Emotional Analysis</span><span class="hi">💛 भावनात्मक
+                विश्लेषण</span></div>
+            <p>This is the Jyotirlinga of <em>bhakti as romance</em>. The saint-poet Akka Mahadevi renounced her royal
+              marriage and wandered naked to Srisailam, singing of Shiva as her true husband. Her Vachanas express the
+              soul's desperate longing for divine love. Mallikarjuna carries the emotional frequency of <em>surrender
+                through beauty</em> - the realization that devotion, art, and love are not separate from liberation.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Venus (Shukra)?</span><span class="hi">🪐 शुक्र का रहस्य</span>
+            </div>
+            <p><em>Mallikarjuna</em> means "Arjuna (Lord) adorned with Mallika - jasmine." Jasmine is Venus's sacred
+              flower: fragrant, sensuous, the flower of love and devotion. This is the only Jyotirlinga where Shiva and
+              Parvati reside together as eternal householders - a living symbol of divine partnership, which is Venus's
+              highest expression. The mountain's lush forests, waterfalls, and rich ecology mirror Venus's love of
+              fertile abundance.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Taurus &amp; Libra?</span><span class="hi">♈ वृष और तुला
+                राशि</span></div>
+            <p><em>Taurus</em> (Venus's earth sign) governs devotion through the senses - beauty, music, fragrant
+              flowers, sacred touch. The ritual offering of jasmine garlands here is purely Taurean. <em>Libra</em>
+              (Venus's air sign) governs divine partnership and sacred balance - exactly what this paired temple of
+              Shiva and Parvati embodies. The two rashis together represent Venus's full spectrum: physical devotion and
+              spiritual union.</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The God Who Waited at His Son's Door</span><span
+              class="hi">पवित्र कथा · वह देव जो अपने पुत्र के द्वार पर रुका</span></div>
+          <p>
+            After the great cosmic race - Ganesha circling his parents, Karthikeya circling the world - Karthikeya lost.
+            But Karthikeya did not accept the result. He felt cheated. His brother had used cleverness; he had used
+            effort. <em>Was cleverness greater than courage?</em> Burning with pride and grief, he left Kailash without
+            saying goodbye and settled on the Krauncha mountain, far to the south, vowing never to return.
+            <br><br>
+            Shiva and Parvati waited. Days passed. Then months. They sent messengers; Karthikeya sent them back. They
+            sent divine apsaras with songs; Karthikeya sat unmoved. Finally, Parvati could bear no more. She said to
+            Shiva: <em>"Our son will not come to us. Then we go to him."</em>
+            <br><br>
+            They descended from Kailash and came to the Krauncha mountain. Karthikeya, hearing that his parents had
+            come, moved further away - he would not speak to them, but he could not quite leave either. And so Shiva and
+            Parvati stopped at the mountain. They did not chase. They simply stayed.
+            <br><br>
+            They are there still. Shiva as <em>Mallikarjuna</em>, Parvati as <em>Bhramaramba</em> - two divine parents
+            who turned the waiting into a temple, the grief of separation into the sweetest jasmine-scented devotion.
+            And every full moon night, it is said, Karthikeya finally comes near - but never quite enters. And Shiva and
+            Parvati wait, patient as mountains, fragrant as jasmine, loving without condition.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. MAHAKALESHWAR -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">03</span>
+        <div class="jl-name">Mahakaleshwar</div>
+        <div class="jl-location">Ujjain · Madhya Pradesh</div>
+        <div class="planet-badge">
+          <span class="planet-icon">♄</span>
+          <span class="planet-name saturn">Shani · Saturn</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Capricorn</span>
+          <span class="rashi-pill">Aquarius</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">Lord of Time, Lord of Death</span><span class="hi">काल के स्वामी, मृत्यु के स्वामी</span>
+        </h3>
+        <p class="lore">
+          Mahakal means "The Great Time" - Shiva as the lord over Kala (time) itself. Ujjain sits on the Tropic of
+          Cancer and was historically the Prime Meridian of Indian astronomy (the Ujjain meridian in Surya Siddhanta).
+          This is the only Jyotirlinga with a south-facing (dakshina-mukha) linga - facing the realm of Yama, the god of
+          death. The famous Bhasma Aarti uses sacred ash (bhasma) from cremation grounds - Saturn's domain.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Saturn rules Capricorn and Aquarius, and is exalted in Libra. In Jyotish, Shani represents karma,
+              discipline, delay, death, service, and liberation through suffering. The Sade Sati (7.5-year Saturn
+              transit) is among the most feared astrological periods - pilgrimage to Mahakaleshwar is the primary Vedic
+              remedy. Astronomically, Ujjain's position as India's historical zero meridian makes this the cosmic clock
+              of the subcontinent.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">🖤 Emotional Analysis</span><span class="hi">🖤 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Mahakaleshwar confronts us with the most terrifying truth: <em>time is consuming us</em>. The bhasma
+              aarti - performed before dawn, with ash, fire, and chanting - is one of the most emotionally overwhelming
+              rituals in Hinduism. Devotees weep. Saturn's energy is grief, fatigue, the weight of years. But Mahakal
+              shows that the same lord who causes suffering through time also liberates us <em>from</em> time. This is
+              the alchemy of karma into grace.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Saturn (Shani)?</span><span class="hi">🪐 शनि का रहस्य</span>
+            </div>
+            <p><em>Mahakal</em> means "The Great Death" or "The Great Time" - and time is Saturn's fundamental domain.
+              Shani is the planet that measures karma, enforces consequences, and governs the body's slow decay. The
+              south-facing linga points toward Yama's realm (Saturn's closest ally). The Bhasma Aarti - performed at 4am
+              with sacred ash from cremation grounds - is the most Saturnine ritual in all of Hinduism: ash, darkness,
+              death, and discipline before dawn.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Capricorn &amp; Aquarius?</span><span class="hi">♈ मकर और कुम्भ
+                राशि</span></div>
+            <p><em>Capricorn</em> (Saturn's earth sign) governs karma crystallised into bone - the weight of past
+              actions, the slow climb of dharmic duty, the endurance required to face what time does to us.
+              <em>Aquarius</em> (Saturn's air sign) governs liberation through surrender - the moment when one stops
+              fighting time and enters the timeless. Ujjain's historic role as India's prime meridian - the zero-point
+              of Indian astronomical time - is itself a Capricorn/Aquarius expression: the earth's master clock.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · When the Earth Split Open</span><span
+              class="hi">पवित्र कथा · जब धरती फट गई</span></div>
+          <p>
+            There was once a brahmin named Shrikar in Ujjain - poor, gentle, and so devoted to Shiva that he performed
+            puja every single day without fail, even when hungry. In those days, a demon king named Dushan had obtained
+            a boon from Brahma: <em>he could not be killed by any god, any weapon, any army.</em> He used this power not
+            to rule, but to destroy - specifically to destroy brahmin rituals. He despised Shiva's devotees most of all.
+            <br><br>
+            Dushan's soldiers marched to Ujjain. They set fire to temples. They dragged brahmins from their puja rooms.
+            Shrikar gathered the remaining devotees: <em>"We will not stop our worship. Let him come."</em>
+            <br><br>
+            Dushan arrived with his full army and stood before Shrikar. He raised his sword to strike. And then -
+            silence. The earth trembled. A crack appeared beneath the altar where Shrikar had been offering puja for
+            thirty years. The crack widened. From the darkness below rose not light, but something older than light:
+            <em>pure, annihilating presence</em>.
+            <br><br>
+            Mahakal stood in the split earth - not beautiful, not terrible, simply <em>absolute</em>. Time itself
+            stopped. Dushan's invincibility meant nothing before the Lord of all Time. He was dissolved. And then
+            Mahakal turned to Shrikar: "Ask." Shrikar said: "Only that you stay. Stay here, in Ujjain, and protect those
+            who cannot protect themselves." And Shiva, Lord of Time, chose to remain - embedded in the earth's dark
+            core, consecrating the moment before dawn when all things die and are reborn.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. OMKARESHWAR -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">04</span>
+        <div class="jl-name">Omkareshwar</div>
+        <div class="jl-location">Mandhata Island · Madhya Pradesh</div>
+        <div class="planet-badge">
+          <span class="planet-icon">☿</span>
+          <span class="planet-name mercury">Budh · Mercury</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Gemini</span>
+          <span class="rashi-pill">Virgo</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The Sacred OM on the Narmada</span><span class="hi">नर्मदा पर पवित्र ॐ</span></h3>
+        <p class="lore">
+          The island of Mandhata, where this shrine sits, is shaped like the sacred syllable "OM" when viewed from above
+          - a geographic miracle confirmed by aerial surveys. The Narmada river circumambulates it in a parikrama.
+          Omkareshwar (Amreshwar) is the Jyotirlinga of sacred sound, intellect, and divine mathematics - all Mercury's
+          domains. Adi Shankaracharya is said to have received Vedanta initiation here from his guru Govindapadacharya.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Mercury rules Gemini and Virgo, and is exalted in Virgo at 15°. Budh governs intellect, communication,
+              commerce, analysis, and sacred syllables (mantras). In Vedic cosmology, the primordial sound OM is the
+              origin of all creation - Mercury is its planetary embodiment. Worship here is prescribed for mercurial
+              afflictions: learning difficulties, speech disorders, anxiety, and disrupted Gemini/Virgo energies. The
+              OM-shaped island itself is a planetary yantra (sacred diagram).</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">💚 Emotional Analysis</span><span class="hi">💚 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Omkareshwar speaks to the intellect that is lost - the seeker who has too many questions and not enough
+              stillness. When Adi Shankaracharya came here as a young prodigy, his intellect was vast but his wisdom was
+              incomplete. Mercury's highest expression is not cleverness but <em>clarity</em>. The emotional offering
+              here is the surrender of the restless mind into the soundless sound - letting OM absorb what analysis
+              never could.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Mercury (Budh)?</span><span class="hi">🪐 बुध का रहस्य</span>
+            </div>
+            <p>Mercury governs sacred sound, mantras, and the power of language - and this Jyotirlinga sits on an island
+              shaped like <em>OM</em>, the primordial sound from which all creation emerged. No other planetary
+              association is as literally carved into the geography. Mercury also rules commerce and intelligence - this
+              shrine sits at a convergence of trade routes on the Narmada, historically one of India's great mercantile
+              rivers. Intellect, sound, and sacred syllable are all Budh's domain.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Gemini &amp; Virgo?</span><span class="hi">♈ मिथुन और कन्या
+                राशि</span></div>
+            <p><em>Gemini</em> (Mercury's air sign) governs the duality of mind - the constant oscillation between
+              questions and answers, the intellect that seeks synthesis. The two aspects of this shrine (Omkareshwar and
+              Amreshwar - twin lingas on one island) mirror Gemini's twin nature. <em>Virgo</em> (Mercury's earth sign)
+              governs discernment and mastery of detail - the meticulous analysis required to decode the sacred geometry
+              of a OM-shaped island, to hear what the Narmada's water is saying.</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The Boy Who Ran Out of Words</span><span
+              class="hi">पवित्र कथा · वह बालक जिसके शब्द समाप्त हो गए</span></div>
+          <p>
+            Adi Shankaracharya was twelve years old and had already memorised all four Vedas, all six Shastras, and
+            could debate any scholar in the land into respectful silence. His mother called him a gift from Shiva. His
+            teachers called him the greatest mind born in a hundred years. Shankara called himself a student - though no
+            teacher had yet been found who could teach him anything new.
+            <br><br>
+            He came to Omkareshwar following the Narmada's call. Near the river, in a cave so low a man had to crawl to
+            enter, he found an old sage meditating. The sage's name was <em>Govindapadacharya</em> - a disciple of the
+            great Gaudapada. Shankara stood at the cave entrance, heart racing. He composed ten spontaneous Sanskrit
+            verses on the spot - the Dashashloki - to introduce himself. The verses were perfect: metre, meaning,
+            philosophy, all flawless.
+            <br><br>
+            The sage opened his eyes. He said only: <em>"Who are you?"</em>
+            <br><br>
+            Shankara opened his mouth. And for the first time in his life, he found he did not know the answer. Not
+            because his mind was empty - his mind was overflowing. But because all his words were about what he knew,
+            not about <em>what he was</em>. He stood at the cave entrance, his brilliant mind completely still, until
+            the stillness itself became the answer.
+            <br><br>
+            The guru smiled. "Enter," he said. And in that cave, on the OM-shaped island where the Narmada whispered
+            around them, Mercury's highest gift was given: the wisdom to know that the mind is not the self. The
+            greatest intellect of the age learned to rest in the sound beyond sound.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. KEDARNATH -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">05</span>
+        <div class="jl-name">Kedarnath</div>
+        <div class="jl-location">Rudraprayag · Uttarakhand</div>
+        <div class="planet-badge">
+          <span class="planet-icon">♂</span>
+          <span class="planet-name mars">Mangal · Mars</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Aries</span>
+          <span class="rashi-pill">Scorpio</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The Warrior's Sanctuary at the Roof of the World</span><span class="hi">विश्व की छत पर
+            योद्धा का आश्रय</span></h3>
+        <p class="lore">
+          After the Kurukshetra war, the Pandavas sought Shiva to atone for killing their kin. Shiva, reluctant to
+          forgive warriors, fled as a bull (Nandi) and dove into the earth. His hump (back) rose at Kedarnath; other
+          body parts manifested at the four Panch Kedars. The shrine at 3,583 meters is accessible only six months a
+          year - the pilgrimage itself is a warrior's ordeal, a test of endurance that mirrors Mars's demand for
+          courage, discipline, and sacrifice.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Mars rules Aries (mool-trikon) and Scorpio, and is exalted in Capricorn. Mangal governs courage, physical
+              energy, war, surgery, competition, brothers, and the blood. The 2013 Kedarnath floods that killed
+              thousands and swept away everything except the ancient temple structure are interpreted in Shaivite
+              tradition as Shiva's own protection of his linga - a testament to Mars/Shiva's indestructible nature.
+              Kedarnath worship heals malefic Mars: aggression, accidents, wounds, and fraternal conflict.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔴 Emotional Analysis</span><span class="hi">🔴 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Kedarnath is the linga of <em>guilt and redemption</em>. The Pandavas were righteous warriors who still
+              carried the unbearable weight of killing their own people. This is Mars's shadow: victory that tastes like
+              ash. At Kedarnath, Shiva receives those who have fought and wounded others - even in pursuit of dharma.
+              The Himalayan cold, the arduous trek, the solitude: they strip away pride and leave only the raw soul
+              seeking absolution.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Mars (Mangal)?</span><span class="hi">🪐 मंगल का रहस्य</span>
+            </div>
+            <p>Mars is the planet of warriors, brothers, blood, and courage - and Kedarnath was established by the
+              <em>Pandavas</em>, the five warrior-brothers of the Mahabharata, after history's greatest war. The trek to
+              Kedarnath at 3,583 metres, through glacial terrain, only accessible six months a year, is itself a Martian
+              test: it demands physical courage, endurance, and the willingness to suffer to reach what you seek. Shiva
+              as Rudra - his most Martian form - manifested here.
+            </p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Aries &amp; Scorpio?</span><span class="hi">♈ मेष और वृश्चिक
+                राशि</span></div>
+            <p><em>Aries</em> (Mars's fire sign) governs the warrior who initiates - who takes action even when the
+              stakes are ultimate, as the Pandavas did on the battlefield of Kurukshetra. <em>Scorpio</em> (Mars's water
+              sign) governs the aftermath of that warrior's action: the deep, inward transformation, the descent into
+              guilt and the slow climb toward atonement. Kedarnath perfectly holds both: the courage to fight (Aries)
+              and the courage to face what fighting cost you (Scorpio).</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The God Who Would Not Forgive - Until He Could Not
+              Refuse</span><span class="hi">पवित्र कथा · जब शिव ने क्षमा किया</span></div>
+          <p>
+            The war was over. Eighteen days of killing. Millions dead. The Pandavas stood in the ruins of their victory
+            and felt nothing but weight. Their guru Vyasa said: <em>"You must receive Shiva's blessing to be cleansed.
+              Go to the Himalayas. Find him."</em>
+            <br><br>
+            But Shiva was furious. He had watched the Kurukshetra war - brothers killing brothers, teachers killing
+            students, dharma used as a license for slaughter. He did not want to bless these warriors. As they climbed
+            into the mountains searching for him, he kept disappearing - dissolving into the snowfields, reappearing
+            miles away.
+            <br><br>
+            Finally, Shiva transformed himself into a bull and hid among a herd of cattle in a high valley. Bhima - the
+            strongest of the Pandavas, built like a mountain himself - spotted him. He recognised something in the
+            bull's eyes. He said to his brothers: <em>"There."</em>
+            <br><br>
+            Shiva-as-bull began to dive into the earth to escape. Bhima lunged forward and grabbed the bull's hump with
+            both hands. The bull sank into the ground. Bhima held on. The earth closed around the bull - but Bhima would
+            not let go. He held the hump above ground through sheer will, knuckles white, arms shaking, until the bull's
+            forward movement stopped.
+            <br><br>
+            Shiva appeared. He looked at Bhima's hands - not gripping the hump in anger, but holding it like a drowning
+            man holds a rope. <em>There was no pride left. Only desperate love.</em>
+            <br><br>
+            "Your guilt," said Shiva quietly, "ends here." The hump became the linga of Kedarnath. And Shiva remained in
+            it forever - in the place where a warrior finally let go of everything except the need to be forgiven.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. BHIMASHANKAR -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">06</span>
+        <div class="jl-name">Bhimashankar</div>
+        <div class="jl-location">Sahyadri · Maharashtra</div>
+        <div class="planet-badge">
+          <span class="planet-icon">☀</span>
+          <span class="planet-name sun">Surya · Sun</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Leo</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The Forest Shrine of Solar Power</span><span class="hi">सौर शक्ति का वन मंदिर</span></h3>
+        <p class="lore">
+          Bhimashankar marks the site where Shiva slew the demon Tripurasura (or Bhima, son of Kumbhakarna, in some
+          versions), whose arrogance and solar power had grown destructive. The sweat from Shiva's battle became the
+          Bhima river. Nestled in the Sahyadri hills within a wildlife sanctuary, this Jyotirlinga emerges from the
+          earth as naturally as the sun rises - a primordial, self-arising expression of solar consciousness.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>The Sun rules Leo and is exalted in Aries at 10°. Surya governs the soul (atma), ego, father, vitality,
+              authority, and self-expression. In the Navagraha system, Surya is the king - and Bhimashankar is where
+              solar arrogance (the demon's inflation) meets divine solar consciousness (Shiva's grace). Worship here
+              addresses Sun afflictions: weak vitality, poor relationship with authority/father, identity crisis, and
+              Leo placements challenged by ego or humiliation.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">🟠 Emotional Analysis</span><span class="hi">🟠 भावनात्मक
+                विश्लेषण</span></div>
+            <p>This Jyotirlinga carries the archetype of the <em>inflated ego that must be humbled</em>. Bhima (the
+              demon) had immense power - but no wisdom. He terrorized the meek and challenged heaven itself. Many of us
+              carry a private Bhima: the ego that demands recognition, that turns our gifts into weapons. Bhimashankar
+              is where the soul learns that solar greatness is not domination - it is <em>illumination of others</em>.
+            </p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why the Sun (Surya)?</span><span class="hi">🪐 सूर्य का रहस्य</span>
+            </div>
+            <p>The demon Bhima's power was solar in its nature - blazing, overwhelming, the raw force of a cosmic ego
+              that believed itself divine. Shiva's destruction of him was not the defeat of darkness by light, but of
+              <em>false solar power by true solar consciousness</em>. The Bhima river that flows from Shiva's
+              battle-sweat is a literal solar river - heat made water. Surya is the soul (atma), and this Jyotirlinga
+              governs the soul's purification: the ego burning away until only pure radiance remains.
+            </p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Leo?</span><span class="hi">♈ सिंह राशि</span></div>
+            <p><em>Leo</em> is the Sun's own sign - the sign of the king, the father, creative authority, and the bright
+              solar ego. The demon Bhima represents Leo's shadow: power without humility, sovereignty without dharma.
+              Bhimashankar is where Leo's energy is consecrated - where the solar king bows before something greater
+              than his own light, and in doing so, becomes truly radiant. Leo placements afflicted by ego, conflict with
+              father, or authority issues find their remedy here.</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The Son Who Became a Sun</span><span
+              class="hi">पवित्र कथा · वह पुत्र जो सूर्य बन गया</span></div>
+          <p>
+            Kumbhakarna - the great demon-brother of Ravana - was killed by Vishnu in the Lanka war. But before he died,
+            he had loved a woman named Karkati. Their son, also named Bhima, was born after his father's death, raised
+            in the forest by his mother. He grew up not knowing who he was or why the world had taken his father from
+            him.
+            <br><br>
+            When Bhima finally learned his father had been killed by Vishnu, something broke open inside him. He
+            performed terrible penance - standing in fire, fasting for years, cutting his own flesh - and obtained from
+            Brahma a boon of invincibility. Then he set out to take his revenge on the entire world of the gods.
+            <br><br>
+            He conquered the three worlds. He imprisoned the king of the gods. He forced everyone to worship him, not
+            Shiva or Vishnu. <em>He wanted to be the only sun in the sky.</em> In his conquered territory, a sage named
+            Kamarupeshwar continued to secretly worship Shiva. Bhima found him, smashed the Shivalinga the sage had been
+            praying to - and raised his sword.
+            <br><br>
+            From the broken stone, Shiva exploded like ten suns at once. The Sahyadri hills shook. The battle that
+            followed lit up the sky. When Bhima finally fell, the gods wept with relief - and then with something else.
+            <em>The demon had only ever wanted to be seen.</em> To matter. To not be the orphan whose father was taken
+            by the powerful.
+            <br><br>
+            Shiva, who understood every form of grief, remained at the spot as the Bhimashankar linga. Not as a trophy
+            over a defeated enemy - but as a monument to the sorrow that turns love into destruction, and the grace that
+            can receive even that.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. KASHI VISHWANATH -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">07</span>
+        <div class="jl-name">Kashi Vishwanath</div>
+        <div class="jl-location">Varanasi · Uttar Pradesh</div>
+        <div class="planet-badge">
+          <span class="planet-icon">♃</span>
+          <span class="planet-name jupiter">Guru · Jupiter</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Sagittarius</span>
+          <span class="rashi-pill">Pisces</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The City of Liberation</span><span class="hi">मोक्ष की नगरी</span></h3>
+        <p class="lore">
+          Varanasi (Kashi - "City of Light") is described in the Kashi Khanda of the Skanda Purana as a city that rests
+          on Shiva's trident - never destroyed, never submerged, because Shiva himself holds it above the cosmic flood.
+          It is said that those who die in Kashi receive Taraka mantra (the liberation mantra) directly from Shiva
+          himself. Kashi is the university of the cosmos - Jupiter's supreme expression as the divine teacher of
+          knowledge, dharma, and moksha.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Jupiter rules Sagittarius and Pisces, and is exalted in Cancer. Guru governs wisdom, dharma, scriptures,
+              teachers, children, higher knowledge, and grace. Varanasi's 84 ghats, 23,000 temples, and 3,000-year
+              continuous habitation make it the world's oldest living city - a Jupiterian repository of all human
+              wisdom. Jyotish prescribes Kashi Vishwanath for Jupiter afflictions: blocked wisdom, guru-related trauma,
+              lack of dharmic direction, and Sagittarius/Pisces imbalances.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">💫 Emotional Analysis</span><span class="hi">💫 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Varanasi is where the fear of death dies. The Ganga Aarti, the burning ghats at Manikarnika, the bells at
+              dawn - they do not console grief; they dissolve the illusion that there is something to grieve. Jupiter's
+              deepest gift is not knowledge but <em>trust</em> - that the cosmos is governed by intelligence and grace.
+              Kashi Vishwanath whispers the most Jupiterian truth: <em>sarvam khalvidam brahma</em> - all this is
+              Brahman. Nothing is truly lost.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Jupiter (Guru)?</span><span class="hi">🪐 गुरु का रहस्य</span>
+            </div>
+            <p>Jupiter is the planet of wisdom, dharma, liberation, and the teacher who points beyond himself - and
+              Kashi is the city where Shiva himself becomes every dying person's personal guru. Jupiter's highest gift
+              is <em>moksha</em>: liberation from the cycle of birth and death. Kashi's promise - that no one who dies
+              here does so without liberation - is the most Jupiterian promise in all of Hindu tradition. The city's
+              3,000-year unbroken existence as a centre of learning is Jupiter embodied in geography.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Sagittarius &amp; Pisces?</span><span class="hi">♈ धनु और मीन
+                राशि</span></div>
+            <p><em>Sagittarius</em> (Jupiter's fire sign) governs the philosophical quest - the arrow aimed at ultimate
+              truth, the pilgrim's fire that will not be quenched until the highest knowledge is found. Kashi is India's
+              greatest pilgrimage destination because the seeker of Sagittarius cannot rest until they have found the
+              source. <em>Pisces</em> (Jupiter's water sign) governs dissolution into the divine - the moment when the
+              seeker ceases to seek because there is no longer a separate seeker. Kashi's Ganga holds both: the flame of
+              the search and the water of total surrender.</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The City That Rests on a Trident</span><span
+              class="hi">पवित्र कथा · त्रिशूल पर टिकी नगरी</span></div>
+          <p>
+            After Sati died and Shiva wandered the world in grief, the gods feared the universe itself might end - for
+            Shiva's mourning was so complete that creation was beginning to dim. Finally, Vishnu intervened: with his
+            Sudarshana Chakra he cut Sati's body into pieces, releasing Shiva from the physical anchor of his grief.
+            <br><br>
+            When the last piece fell and Shiva was finally free, he came to the confluence of the Varuna and Asi rivers.
+            He looked at the land and said: <em>"Here. I will teach."</em>
+            <br><br>
+            He lifted Kashi on his trident - raised the entire city above the floods of cosmic dissolution - and
+            declared: <em>"When the universe ends, when even the gods sleep, this city will remain. And I will walk its
+              streets. And every being who dies here, I will personally whisper the Taraka mantra into their ear - the
+              mantra that carries them across the ocean of rebirth to the other shore."</em>
+            <br><br>
+            Jupiter's gift is trust. And the greatest trust ever asked of any soul is: trust that death is not the end.
+            Kashi asks you to die - completely - in the presence of a god who will not let you be lost. Millions have
+            done it. They come from every corner of India, frail and old, to spend their final days in a city that sits
+            on a divine trident above the reach of oblivion. And Shiva walks among them - not as a distant deity, but as
+            <em>the last teacher, whispering in the dark</em>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. TRIMBAKESHWAR -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">08</span>
+        <div class="jl-name">Trimbakeshwar</div>
+        <div class="jl-location">Nashik · Maharashtra</div>
+        <div class="planet-badge">
+          <span class="planet-icon">☊</span>
+          <span class="planet-name rahu">Rahu · North Node</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Aquarius</span>
+          <span class="rashi-pill">Virgo</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The Trident of Three Eyes</span><span class="hi">त्रिनेत्र का त्रिशूल</span></h3>
+        <p class="lore">
+          Trimbak means "Three-Eyed One" - Shiva's three eyes representing the sun, moon, and fire (the three dimensions
+          of cosmic perception). The Godavari river, called the "Ganges of the South" (Dakshina Ganga), originates here.
+          This is the site of the Kumbh Mela Nasik-Trimbak and the famous Narayan Nagbali rituals for ancestral relief -
+          deeply Rahu-ketu terrain, concerning karmic debts, ancestral curses, and shadow-self integration.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Rahu is not a planet but a shadow node - the lunar north node - associated with obsession, illusion,
+              foreign things, material ambition, and karmic acceleration. It co-rules Aquarius (with Saturn) and
+              influences Gemini/Virgo. The three lingas at Trimbakeshwar - representing Brahma, Vishnu, and Mahesh - are
+              unique in all 12 shrines. Rahu's remedies here include Kalsarpa Dosha puja (for Rahu-Ketu axis
+              afflictions) and ancestral rites (Pitru Dosha). The Godavari's origin here marks it as a river that
+              dissolves karmic debt.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">🟣 Emotional Analysis</span><span class="hi">🟣 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Trimbakeshwar holds the energy of the <em>karmic shadow</em> - the debts we carry from ancestors we never
+              knew, the desires that haunt us without logical origin. Rahu represents the soul's insatiable hunger, the
+              craving for experience. Here, Shiva's three eyes represent the capacity to <em>see through illusion</em>.
+              The emotional gift is not satisfaction of desire but the awakening of the third eye - the recognition that
+              what we desperately pursue was always already within.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Rahu (North Node)?</span><span class="hi">🪐 राहु का रहस्य</span>
+            </div>
+            <p>Rahu is the shadow - the obsessive hunger for experience, the karmic debt inherited from ancestors, the
+              illusions that masquerade as reality. Trimbakeshwar is the primary site in all of Hindu sacred geography
+              for <em>Kalsarpa Dosha</em> (when all planets fall between Rahu and Ketu) and <em>Pitru Dosha</em>
+              (ancestral karmic debt) remedies. The three-eyed form of Shiva here represents seeing through Rahu's
+              illusion. The Godavari, born here, is specifically described as a river that dissolves karmic shadow -
+              Rahu's antidote made into water.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Aquarius &amp; Virgo?</span><span class="hi">♈ कुम्भ और कन्या
+                राशि</span></div>
+            <p><em>Aquarius</em> (Rahu-Saturn co-ruled) governs the collective karmic shadow - the unconscious patterns
+              inherited from lineage, ancestors, and society. Rahu in Aquarius creates obsession with collective
+              patterns, karmic lineages, and the pull of the past. <em>Virgo</em> (Mercury-ruled, Rahu-influenced)
+              governs the meticulous accounting of karmic debts - the precise spiritual work of tracing hidden
+              afflictions to their root. Both signs speak to what is unseen, inherited, and waiting to be dissolved in
+              the Godavari's sacred flow.</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The River Born From a Sage's Innocence</span><span
+              class="hi">पवित्र कथा · एक ऋषि की निर्दोषता से जन्मी नदी</span></div>
+          <p>
+            Sage Gautama lived near the Brahmagiri mountain with his wife Ahalya. Through decades of pure penance, the
+            Godavari river flowed at his call - his ashram never knew drought. Other sages came to live near him, drawn
+            by the abundance. But abundance breeds envy.
+            <br><br>
+            The sages grew jealous. They created a magical illusion (a Rahu-trick, as the scriptures call it) of a dying
+            cow near Gautama's ashram. When Gautama moved to help it, it collapsed and "died" at his feet. The other
+            sages cried: <em>"Brahminicide! He has killed a cow!"</em> The most devastating accusation in the ancient
+            world. Gautama's reputation was destroyed overnight.
+            <br><br>
+            Gautama was innocent - but guilt does not require evidence to wound the soul. Crushed, he prayed to Shiva:
+            <em>"I cannot prove my innocence. But if I am to carry this guilt, let me at least do something worthy of
+              it. Let me bring the Ganga herself down from heaven to purify me."</em>
+            <br><br>
+            Shiva was moved by this: a man framed by lies, asking not for justice but for the chance to be made clean.
+            He opened his matted hair and the Godavari - Gautami Ganga - poured forth, flowing from Trimbakeshwar to the
+            sea. And Shiva manifested here as <em>Trimbakeshwar</em>, the Three-Eyed One - because Rahu's illusion can
+            only be broken by the eye that sees what is actually true.
+            <br><br>
+            To this day, Trimbakeshwar is where those wrongly accused, karmically burdened, or haunted by ancestral
+            shadows come to wash themselves clean in the river that was born of one man's unbearable innocence.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. VAIDYANATH -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">09</span>
+        <div class="jl-name">Vaidyanath</div>
+        <div class="jl-location">Deoghar · Jharkhand</div>
+        <div class="planet-badge">
+          <span class="planet-icon">☋</span>
+          <span class="planet-name ketu">Ketu · South Node</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Scorpio</span>
+          <span class="rashi-pill">Pisces</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The Divine Physician</span><span class="hi">दिव्य वैद्य</span></h3>
+        <p class="lore">
+          Vaidyanath means "Lord of Physicians." According to the Shiva Purana, Ravana worshipped Shiva here with
+          extraordinary devotion, ultimately offering his ten heads as sacrifice. Shiva, moved, granted Ravana his linga
+          - but conditions were violated and it became fixed at Deoghar. The Shravan Mela here draws 3–4 million
+          pilgrims annually who carry sacred Ganga water on foot from Sultanganj (over 100 km) to offer it to the linga
+          - one of the world's largest pilgrimages.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Ketu, the lunar south node, represents liberation, spirituality, past-life karma, illness, mysticism, and
+              dissolution. It co-rules Scorpio (with Mars) and Pisces (with Jupiter). Vaidyanath's role as healer aligns
+              with Ketu's capacity for transcendence through suffering - illness as a spiritual initiation. In Jyotish,
+              this shrine is prescribed for chronic diseases, inexplicable ailments (often Ketu-related), and for Ketu
+              Mahadasha afflictions. Ravana's extreme devotion - a Ketu-style total self-offering - is the mythological
+              template.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">🤍 Emotional Analysis</span><span class="hi">🤍 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Ravana's story is deeply moving: a demon-king of extraordinary brilliance, learning, and devotion - who
+              could not transcend his ego. He offered his heads, yet kept one desire that doomed him. Vaidyanath carries
+              the emotional signature of <em>devotion that stops just short of total surrender</em>. Ketu strips away
+              all the heads - intellect, pride, identity - and what remains is the healer: the soul purified by
+              suffering, offering only what cannot be taken away.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Ketu (South Node)?</span><span class="hi">🪐 केतु का रहस्य</span>
+            </div>
+            <p>Ketu is the planet of dissolution, past-life karma, liberation through suffering, and the invisible hand
+              of grace. <em>Vaidyanath</em> means "Lord of Physicians" - and Ketu governs chronic illness as a form of
+              spiritual initiation, the body's suffering as a path to the soul's freedom. Ravana's act of cutting off
+              his own heads - the most Ketu-like offering in all sacred literature, dismantling identity piece by piece
+              - is the mythological key to this shrine. Ketu strips, and what remains is the healed soul.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Scorpio &amp; Pisces?</span><span class="hi">♈ वृश्चिक और मीन
+                राशि</span></div>
+            <p><em>Scorpio</em> (Ketu-Mars co-ruled) governs death, transformation, and the courage to go to one's own
+              annihilation in pursuit of something greater - exactly Ravana's offering of his heads. <em>Pisces</em>
+              (Ketu-Jupiter co-ruled) governs spiritual dissolution, surrender to the healer, and the mercy that
+              receives what intellect cannot reach. Together they form the full arc of Ketu's healing: the Scorpionic
+              willingness to be destroyed, and the Piscean grace that receives the dissolved soul and makes it whole.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · Ten Heads and One Condition</span><span
+              class="hi">पवित्र कथा · दस शीश और एक शर्त</span></div>
+          <p>
+            Ravana wanted to carry Shiva back to Lanka. Not for power - for love. He was a devotee of extraordinary
+            sincerity, and he wanted his entire kingdom to be bathed in Shiva's direct presence. He began his penance on
+            Mount Kailash: standing in fire, fasting for a thousand years, meditating without moving.
+            <br><br>
+            Shiva did not come.
+            <br><br>
+            Ravana picked up a stone and cut off one of his ten heads, placing it as an offering on the sacred fire. He
+            continued meditating - nine-headed. Still Shiva did not come. He cut off a second head. Then a third. Each
+            head was a universe of knowledge - he had memorised all four Vedas with each one. By the ninth head, the
+            gods in heaven were weeping. Even they had never seen such devotion.
+            <br><br>
+            As Ravana raised the blade to cut his final head, Shiva appeared: <em>"Stop."</em> And for the first time in
+            ten thousand years, Ravana's hand trembled. Shiva said: <em>"All your heads I return to you. Ask."</em>
+            <br><br>
+            Ravana asked to carry the Jyotirlinga to Lanka. Shiva said: <em>"You may carry me. But never set me down
+              until you reach Lanka. If you do, I will become fixed wherever I touch the earth."</em>
+            <br><br>
+            The gods panicked and sent Ganesha disguised as a young boy to trick Ravana. He offered to hold the linga
+            "just for a moment." Ravana - master of 64 arts, owner of ten brilliant heads - was outwitted by a child's
+            simple trick. He set the linga down at Deoghar, and it became fixed forever.
+            <br><br>
+            <em>The greatest devotion in the world met the smallest divine mischief - and grace won.</em> Vaidyanath
+            remains at Deoghar: not in Lanka as Ravana dreamed, but in the heart of India, healing everyone.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. NAGESHWAR -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">10</span>
+        <div class="jl-name">Nageshwar</div>
+        <div class="jl-location">Dwarka · Gujarat</div>
+        <div class="planet-badge">
+          <span class="planet-icon">🐍</span>
+          <span class="planet-name rahu">Rahu-Shani Combined</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Aquarius</span>
+          <span class="rashi-pill">Capricorn</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">Lord of Serpents, Lord of Poisons</span><span class="hi">नागों के स्वामी, विष के
+            स्वामी</span></h3>
+        <p class="lore">
+          Nageshwar means "Lord of Serpents" (naga = snake). In Shaiva tradition, the serpent Vasuki wraps around
+          Shiva's neck - a symbol of mastery over the deepest, oldest fear: death by poison, venom, hidden enemies, and
+          subterranean terror. The Shiva Purana narrates the story of the merchant Supriya who was imprisoned by the
+          demon Daruka and liberated through devotion here. The linga faces west - toward the setting sun, toward the
+          shadow world, toward what is hidden.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Rahu and Saturn together govern the serpentine, shadow realm. Rahu is associated with serpents (naga) in
+              Vedic astrology - it represents hidden karma, poisons (both literal and metaphorical), and the
+              subconscious. Saturn rules the underworld, hidden enemies, and chronic suffering. Nageshwar worship is
+              particularly prescribed for those suffering from Sarpa Dosha (serpent curse), Rahu Ketu afflictions, and
+              hidden enemies. The proximity to Dwarka - Krishna's lost city - adds a layer of cosmic mystery to this
+              shrine's geography.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">⬛ Emotional Analysis</span><span class="hi">⬛ भावनात्मक विश्लेषण</span>
+            </div>
+            <p>The serpent is the oldest symbol of the unconscious - of what writhes beneath our awareness, of primal
+              fear, hidden power, and transformation through venom. Nageshwar teaches that <em>Shiva wears the snake, he
+                is not bitten by it.</em> The emotional invitation here is to face our deepest, most primitive fears -
+              fear of betrayal, of hidden enemies, of our own shadow - and to discover that the Lord who governs the
+              serpent's realm is also its master. Poison becomes medicine here.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Rahu &amp; Saturn Combined?</span><span class="hi">🪐 राहु-शनि का
+                रहस्य</span></div>
+            <p>Naga (serpent) is Rahu's primary symbol in Vedic astrology - Rahu is literally depicted as a severed
+              serpent's head. Saturn governs the dark earth, the underground, the domain of what is buried and hidden.
+              Together, Rahu-Saturn governs <em>Sarpa Dosha</em> - the serpent curse - which afflicts those whose
+              ancestors wronged snakes or who carry hidden karmic debt from past lives. Nageshwar, "Lord of the
+              Serpents," is therefore the supreme remedy for this combined Rahu-Saturn affliction. Shiva wearing Vasuki
+              around his neck is the image of these planets fully mastered.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Aquarius &amp; Capricorn?</span><span class="hi">♈ कुम्भ और मकर
+                राशि</span></div>
+            <p><em>Aquarius</em> (Rahu-Saturn) governs the collective unconscious, karmic inheritance from ancestral
+              lines, and the hidden forces operating beneath society's surface - all serpentine territory.
+              <em>Capricorn</em> (Saturn's earth sign) governs the underground world: the caves, the deep earth, the
+              realm where serpents dwell and ancient karmas are stored in the rock of time. Dwarka's proximity -
+              Krishna's lost undersea city - adds a Capricorn-Aquarius depth: treasures and truths hidden beneath the
+              ocean's surface.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The Mantra That Defeated a Demon's
+              Kingdom</span><span class="hi">पवित्र कथा · वह मंत्र जिसने राक्षस-राज्य को जीता</span></div>
+          <p>
+            There was a demoness named Daruka who ruled a kingdom of rakshasas that could move through the ocean like an
+            underwater city. She had obtained a boon from Parvati: her kingdom could never be destroyed as long as her
+            people fought within it. So she built her kingdom beneath the waves near Dwarka, and from there raided the
+            world of humans, dragging merchants, pilgrims, and innocents into her underwater prison.
+            <br><br>
+            Among those captured was a merchant named Supriya - a devotee of Shiva so sincere that even in the darkness
+            of the demon's prison, he sat and chanted the Panchakshara: <em>Om Namah Shivaya. Om Namah Shivaya.</em>
+            <br><br>
+            Day by day, more prisoners joined him - not out of faith, but because the sound was the only light in the
+            darkness. The mantra spread through the prison like a river finding its way through stone. Even the guards
+            began to hear it.
+            <br><br>
+            Daruka came herself to silence Supriya. He was sitting perfectly still, eyes closed, lips moving. She raised
+            her weapon. And Shiva erupted from the darkness - not as a god descending from above, but <em>rising from
+              the earth itself</em>, as Nageshwar, the serpent lord, whose coils encompassed the entire underworld.
+            Every snake in Daruka's realm, every naga in the deep earth, turned toward Shiva. The poison that was
+            Daruka's weapon became the medicine that freed every prisoner.
+            <br><br>
+            The mantra had not just saved one man. It had turned a prison into a temple.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. RAMESHWARAM -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">11</span>
+        <div class="jl-name">Rameshwaram</div>
+        <div class="jl-location">Rameswaram Island · Tamil Nadu</div>
+        <div class="planet-badge">
+          <span class="planet-icon">☀</span>
+          <span class="planet-name sun">Surya / Mangal Combined</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Aries</span>
+          <span class="rashi-pill">Leo</span>
+          <span class="rashi-pill">Scorpio</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">Where Rama Worshipped Shiva</span><span class="hi">जहाँ राम ने शिव की पूजा की</span></h3>
+        <p class="lore">
+          Rameshwaram - "Lord worshipped by Rama" - is the Jyotirlinga established by Lord Rama himself after slaying
+          Ravana, to expiate the sin of brahminicide (Ravana was a brahmin). This is the southernmost Jyotirlinga, on
+          the island of Pamban, close to Sri Lanka. The Ramanathaswamy temple corridor - 1,212 meters long - is the
+          longest temple corridor in the world. The ritual of bringing Ganga water from Varanasi to offer here, and
+          Rameswaram sand to offer in Kashi, creates a spiritual axis that unites north and south India.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Rama is an incarnation of Vishnu - a solar deity and ideal king (exalted Sun in Aries). His worship of
+              Shiva here demonstrates a profound cosmological truth: even solar perfection requires Shaiva grace. Mars
+              (warrior/dharma) and Sun (soul/king) combine here in the archetype of the warrior-king who wins and then
+              atones. The unique cosmic bridge (Adam's Bridge/Rama Setu) connecting India to Sri Lanka is a geomantic
+              feature aligning with Mars's capacity for engineering impossible endeavors.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">🟡 Emotional Analysis</span><span class="hi">🟡 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Rameshwaram holds the paradox at the heart of dharmic life: <em>you can do everything right and still
+                carry guilt.</em> Rama won the war, rescued Sita, upheld dharma - and still felt the weight of the
+              brahmin's death. This is the emotional truth that brings millions here: the guilt of the good person. Not
+              sin committed from weakness, but harm done in pursuit of righteousness. Rameshwaram says: Shiva receives
+              even the righteous warrior's grief. Especially his.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Sun &amp; Mars Combined?</span><span class="hi">🪐 सूर्य-मंगल का
+                रहस्य</span></div>
+            <p>Rama is the <em>Surya-vamshi</em> - born in the solar dynasty, the ideal king whose soul is the Sun made
+              human. But his act at Rameshwaram is pure Mars: the warrior who won the greatest war in history then
+              prostrated himself before Shiva to atone for the blood on his hands. Sun represents the dharmic soul; Mars
+              represents the warrior's courage - here both bow together before Shiva. The Rama Setu bridge built across
+              the ocean is Mars's greatest engineering feat, and the worship at its southern end is the Sun's highest
+              devotional act.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Aries, Leo &amp; Scorpio?</span><span class="hi">♈ मेष, सिंह और
+                वृश्चिक राशि</span></div>
+            <p><em>Aries</em> (Mars's fire) governs the initiation of the warrior - Rama drawing his bow, choosing
+              dharma over comfort. <em>Leo</em> (Sun's sign) governs the king who must be both powerful and humble -
+              Rama's greatest quality was precisely this: a king who could bow. <em>Scorpio</em> (Mars's water sign)
+              governs the atonement after war - the descent into guilt's darkness before transformation. Rameshwaram
+              holds all three signs because Rama lived all three fully: the warrior (Aries), the king (Leo), and the man
+              who faced what war cost (Scorpio).</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The Linga That Belonged to the Devotee, Not the
+              Hero</span><span class="hi">पवित्र कथा · भक्त का लिंग, वीर का नहीं</span></div>
+          <p>
+            After the war, when Lanka's fires had cooled and Ravana lay in the dust, Rama stood on the shore of the
+            southern sea and understood what he had done. <em>He had killed a brahmin.</em> Ravana - demon king, yes,
+            but born a brahmin and master of all Vedic knowledge. The dharma that had justified the war now demanded its
+            price.
+            <br><br>
+            Rama decided to consecrate a Shivalinga on the southern shore. He sent Hanuman - his greatest devotee, the
+            strongest being alive - to Mount Kailash to bring a linga consecrated by Shiva himself. "Go quickly," said
+            Rama. "Return before the auspicious hour passes."
+            <br><br>
+            Hanuman flew with the speed of wind. He flew faster. The Himalayas blurred beneath him. But Kailash was far,
+            and the auspicious hour was moving like water through sand.
+            <br><br>
+            On the shore, the moment was arriving. Sita looked at Rama. Rama looked at the empty sky. There was no sign
+            of Hanuman. The moment would pass in minutes.
+            <br><br>
+            Sita knelt at the water's edge. With her own hands, she gathered wet sand from the sea and shaped a linga -
+            small, imperfect, formed by a woman's hands from ocean sand. She consecrated it with the sound of Shiva's
+            name. The moment was held.
+            <br><br>
+            Hanuman arrived, the great Kailasha linga in his arms, to find a small sand linga already in place. His face
+            fell. Rama saw the grief. He said: <em>"Yours shall be placed beside mine, and every worshipper must honour
+              your linga first, before mine, for all time."</em>
+            <br><br>
+            To this day at Rameshwaram, every pilgrim first touches the Vishwalingam - Hanuman's linga - before
+            approaching the main shrine. The greatest hero of the age placed his devotee's offering above his own.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. GRISHNESHWAR -->
+    <div class="jl-card">
+      <div class="jl-left">
+        <span class="jl-number">12</span>
+        <div class="jl-name">Grishneshwar</div>
+        <div class="jl-location">Aurangabad · Maharashtra</div>
+        <div class="planet-badge">
+          <span class="planet-icon">♀</span>
+          <span class="planet-name venus">Shukra-Ketu Combined</span>
+        </div>
+        <div class="rashi-pills">
+          <span class="rashi-pill">Libra</span>
+          <span class="rashi-pill">Pisces</span>
+        </div>
+      </div>
+      <div class="jl-right">
+        <h3><span class="en">The Compassionate Final Gateway</span><span class="hi">करुणामय अंतिम द्वार</span></h3>
+        <p class="lore">
+          Grishneshwar (also Ghrishneshwar - "Lord of Compassion") is the last Jyotirlinga - the final syllable of the
+          cosmic mantra. Its Puranic story involves Kusuma, a devoted widow whose son was killed by her co-wife out of
+          jealousy, then revived by Shiva's grace when his remains were thrown into a lake. The linga here vibrates with
+          the energy of Shiva as Vaidya (healer) and Daya (mercy) - the compassionate face that receives those who have
+          already visited all others and still ache.
+        </p>
+        <div class="analysis-box">
+          <div class="analysis-item">
+            <div class="label"><span class="en">🔬 Factual Analysis</span><span class="hi">🔬 तथ्यात्मक विश्लेषण</span>
+            </div>
+            <p>Venus-Ketu combined energy governs both artistic refinement (Venus/Libra) and spiritual dissolution
+              (Ketu/Pisces). The lake at Grishneshwar - Shivalaya - where the devotee's son was revived represents
+              Ketu's power of resurrection beyond material logic. Being adjacent to Ellora Caves (a UNESCO World
+              Heritage Site of extraordinary Shaivite art), Grishneshwar is aesthetically embedded in Venus's realm of
+              devotional beauty. The 12th position - the 12th house in astrology is the house of liberation, loss, and
+              the dissolution of ego - mirrors perfectly the Jyotirlinga cycle's conclusion.</p>
+          </div>
+          <div class="analysis-item">
+            <div class="label"><span class="en">🌸 Emotional Analysis</span><span class="hi">🌸 भावनात्मक
+                विश्लेषण</span></div>
+            <p>Grishneshwar is mercy without condition. When a woman's child was murdered out of petty jealousy - one of
+              the most senseless human crimes - Shiva did not philosophize. He simply restored what was taken. This is
+              the emotional signature of the last Jyotirlinga: <em>after all the cosmic drama of planets, karma, time,
+                and liberation - what remains is Shiva's infinite tenderness.</em> The 12th linga asks nothing of you.
+              It simply holds the space where the broken are made whole.</p>
+          </div>
+        </div>
+
+        <div class="reason-box">
+          <div class="reason-item planet-reason">
+            <div class="label"><span class="en">🪐 Why Venus &amp; Ketu Combined?</span><span class="hi">🪐 शुक्र-केतु
+                का रहस्य</span></div>
+            <p>Venus governs devotion expressed through beauty - the daily ritual of 101 clay lingas that Kusuma created
+              with her hands, the gentle aesthetic of a widow's sincere worship. Ketu governs the miraculous, the grace
+              that defies logic - a murdered child walking out of a lake. Together, Venus-Ketu creates the highest form
+              of bhakti: beauty without ego (Venus) dissolving into formless grace (Ketu). The proximity to Ellora's
+              extraordinary Shaiva art - among the world's most beautiful sacred carvings - places this shrine firmly in
+              Venus's domain of devotional aesthetics.</p>
+          </div>
+          <div class="reason-item rashi-reason">
+            <div class="label"><span class="en">♈ Why Libra &amp; Pisces?</span><span class="hi">♈ तुला और मीन
+                राशि</span></div>
+            <p><em>Libra</em> (Venus's air sign) governs justice, balance, and the restoration of what was wrongfully
+              taken - a murdered child given back, injustice overturned by mercy. The 12th Jyotirlinga stands for cosmic
+              balance restored after the full circuit of karmic experiences. <em>Pisces</em> (Ketu-Jupiter, the 12th
+              sign) governs liberation, the dissolution of all remaining karma, the final merging. Being the 12th
+              Jyotirlinga, this shrine mirrors the 12th house and 12th sign: the end of all cycles, the point where
+              suffering becomes mercy, and mercy becomes liberation.</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-label"><span class="en">Sacred Story · The Miracle That Was Won by a Mother's
+              Forgiveness</span><span class="hi">पवित्र कथा · माँ की क्षमा से मिला चमत्कार</span></div>
+          <p>
+            Kusuma was a widow of modest means. Every morning before dawn, she would sit at her small altar and shape
+            101 lingas from fresh clay - each one formed with her hands, each one worshipped with water, flowers, and a
+            single lamp. Then she would carry them to the lake and immerse them, watching the clay dissolve. She had
+            done this every day for decades. Not for a miracle. Not for a reward. Just because Shiva was real to her,
+            the way a friend is real.
+            <br><br>
+            Her son had married a woman named Ghushma. Ghushma watched her mother-in-law's devotion receive love and
+            reverence from the whole village, and something poisonous grew in her. One night, she crept into her
+            husband's room. She killed him. She carried his remains to the lake and dropped them in the water where
+            Kusuma's lingas dissolved every morning.
+            <br><br>
+            In the morning, Kusuma took her 101 lingas to the lake. She was immersing them one by one when she heard
+            something. She turned. Her son was walking toward her from the water, alive, whole, his face confused, as if
+            he had simply woken from a strange dream.
+            <br><br>
+            Shiva appeared before her. <em>"Ask,"</em> he said. <em>"Anything."</em>
+            <br><br>
+            Kusuma was quiet for a long moment. Then she said: <em>"Forgive my daughter-in-law. Do not punish her. She
+              was unhappy. I must not have loved her enough."</em>
+            <br><br>
+            Shiva stood still. Of all the prayers he had heard in all the yugas - devotion, war, grief, guilt, longing,
+            liberation - this was something else entirely. A mother asking mercy for her child's murderer, and blaming
+            only herself.
+            <br><br>
+            <em>"Because of what you just said,"</em> Shiva told her, <em>"I will stay here. Not because of your
+              penance. Because of your mercy."</em>
+            <br><br>
+            Grishneshwar - the Lord of Compassion - is not the Jyotirlinga of the greatest warrior or the greatest
+            scholar or the greatest renunciate. It is the Jyotirlinga of the greatest heart.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- MEDITATION & PRAYER GUIDANCE -->
+  <section class="meditation-section">
+    <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+      <div class="section-header" style="padding-top:0">
+        <p class="section-label"><span class="en">Spiritual Practice</span><span class="hi">आध्यात्मिक साधना</span></p>
+        <h2><span class="en">How to Connect With Each Shrine</span><span class="hi">प्रत्येक तीर्थ से कैसे जुड़ें</span>
+        </h2>
+      </div>
+      <p class="med-intro">
+        You do not need to travel to a Jyotirlinga to receive its grace. Classical Shaiva texts teach that sincere
+        meditation, performed at the right time, with the correct mantra and a heart prepared to receive, creates a
+        direct channel to the shrine's planetary consciousness - wherever you are in the world.
+      </p>
+    </div>
+    <div class="med-grid" id="medGrid"></div>
+  </section>
+
+  <!-- SYNTHESIS SECTION -->
+  <section class="synthesis">
+    <div class="container">
+      <div class="section-header" style="padding-top:0">
+        <p class="section-label"><span class="en">The Greater Pattern</span><span class="hi">महान ब्रह्माण्डीय
+            रचना</span></p>
+        <h2><span class="en">What the 12 Lingas Reveal Together</span><span class="hi">१२ लिंग मिलकर क्या प्रकट करते
+            हैं</span></h2>
+      </div>
+      <p
+        style="text-align:center; font-size:18px; color:var(--ash); max-width:700px; margin:0 auto 50px; opacity:0.85; font-style:italic; line-height:1.9;">
+        Taken together, the 12 Jyotirlingas constitute a complete planetary system - covering all 9 grahas (the 7
+        classical planets plus Rahu and Ketu), distributed geographically from Gujarat to Tamil Nadu, from the Himalayas
+        to the southern sea. The entire Vedic cosmos is mapped onto the sacred body of Bharat (India).
+      </p>
+      <div class="synthesis-grid">
+        <div class="synth-card">
+          <div class="synth-icon">🌍</div>
+          <h3><span class="en">India as Living Yantra</span><span class="hi">भारत: एक जीवित यंत्र</span></h3>
+          <p>The placement of the 12 Jyotirlingas across India is not accidental. Classical Shaiva texts describe Bharat
+            as Shiva's own body - the Himalayas as his head, the Deccan as his torso, the southern seas as his feet. The
+            lingas mark sacred energy vortices (shakti kshetras) that correspond to planetary energies flowing through
+            the land's subtle body.</p>
+        </div>
+        <div class="synth-card">
+          <div class="synth-icon">🪐</div>
+          <h3><span class="en">Complete Planetary Coverage</span><span class="hi">सम्पूर्ण नवग्रह आवरण</span></h3>
+          <p>Between the 12 shrines, all 9 Navagrahas are represented: Sun (Bhimashankar, Rameshwaram), Moon (Somnath),
+            Mars (Kedarnath), Mercury (Omkareshwar), Jupiter (Kashi Vishwanath), Venus (Mallikarjuna, Grishneshwar),
+            Saturn (Mahakaleshwar), Rahu (Trimbakeshwar, Nageshwar), and Ketu (Vaidyanath). This is a complete cosmic
+            pharmacy.</p>
+        </div>
+        <div class="synth-card">
+          <div class="synth-icon">📿</div>
+          <h3><span class="en">The Pilgrimage as Horoscope</span><span class="hi">तीर्थयात्रा: एक जन्मपत्री</span></h3>
+          <p>In Shaivite tradition, completing the pilgrimage of all 12 Jyotirlingas (Dvadasha Jyotirlinga Yatra) is
+            equivalent to propitiating all planets and achieving cosmic equilibrium. It is a full-body, full-planet
+            purification - healing not just one's chart but one's entire karmic lineage across generations.</p>
+        </div>
+        <div class="synth-card">
+          <div class="synth-icon">💧</div>
+          <h3>Water & Sacred Geography</h3>
+          <p>Nearly every Jyotirlinga is at the confluence of rivers or the sea - Somnath at the Arabian Sea,
+            Omkareshwar at the Narmada, Trimbakeshwar at Godavari's source, Rameshwaram at the ocean. Water in Jyotish
+            represents the Moon and purification. The geographic pattern reveals that Shiva's planetary temples are
+            placed where the earth's own watery veins pulse most powerfully.</p>
+        </div>
+        <div class="synth-card">
+          <div class="synth-icon">🔥</div>
+          <h3><span class="en">Jyoti - The Light Principle</span><span class="hi">ज्योति - प्रकाश का सिद्धांत</span>
+          </h3>
+          <p>The word Jyotirlinga comes from "jyoti" (divine light) and "linga" (form/symbol). Each linga is not a stone
+            - it is a self-manifested column of Shiva's primal light, condensed into geography. In this sense, each
+            Jyotirlinga is a sun - a star - that emits a specific frequency of planetary consciousness, and pilgrimage
+            is a form of stellar absorption.</p>
+        </div>
+        <div class="synth-card">
+          <div class="synth-icon">🕉️</div>
+          <h3><span class="en">Beyond Planets: Toward Moksha</span><span class="hi">ग्रहों से परे: मोक्ष की ओर</span>
+          </h3>
+          <p>While the planetary associations are profound, every Jyotirlinga ultimately points beyond astrology. The
+            purpose of knowing which planet a shrine rules is not to manipulate cosmic forces, but to understand what
+            quality of consciousness one is invoking - and ultimately, to move through planetary consciousness toward
+            Shiva's own formless light, where no planet rules and no karma remains.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMOTIONAL CONCLUSION -->
+  <div class="container" style="padding-bottom:60px;">
+    <div class="intro-block" style="margin-top:60px;">
+      <p>
+        In an age that has reduced spirituality to either blind ritual or cold rationality, the Jyotirlinga tradition
+        offers a third path: the sacred science of planetary devotion. Each of these 12 shrines was not built by human
+        hands alone - they were <em>revealed</em>, discovered, and consecrated across millennia by saints, kings, and
+        ordinary souls who had nowhere else to turn.
+      </p>
+      <p>
+        What moves us most, perhaps, is this: whether it was Soma the Moon-god weeping for his lost brilliance, Rama the
+        perfect king atoning for a necessary war, or a widow whose only child was taken by jealousy - Shiva received
+        them all. No planetary affliction, no karmic weight, no human sorrow was turned away.
+      </p>
+      <p>
+        The 12 Jyotirlingas are not merely astronomical or astrological constructs. They are a complete map of human
+        suffering and divine mercy - twelve ways the universe breaks open, twelve ways the light comes through.
+      </p>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references">
+    <h2>References & Sources</h2>
+    <ul class="ref-list">
+
+      <div class="ref-category"><span class="en">I. PRIMARY PURANIC SOURCES</span><span class="hi">I. प्राथमिक पुराण
+          स्रोत</span></div>
+
+      <li><strong>Shiva Purana</strong> - Vidyeshvara Samhita &amp; Kotirudra Samhita. Primary canonical source for all
+        12 Jyotirlinga narratives, origin myths, and planetary correspondences. Contains the foundational declaration:
+        <span class="ref-quote">"Dwadasha Jyotirlinga-ni sakshat Shambho vigraham" - The twelve Jyotirlingas are the
+          direct embodied forms of Shambhu himself.</span> Translated by J.L. Shastri, Motilal Banarsidass, Ancient
+        Indian Tradition &amp; Mythology Series, Vol. 1–4.
+      </li>
+
+      <li><strong>Skanda Purana</strong> (स्कन्द पुराण) - The largest of the 18 Mahapuranas (81,000 verses). Contains
+        the Kashi Khanda (on Vishwanath), Kedara Khanda (on Kedarnath &amp; Panch Kedar), Setu Mahatmya (on
+        Rameshwaram), and Brahma-Uttara-Khanda (on Somnath). Establishes Kashi as "the city that never experiences
+        dissolution even at cosmic pralaya."</li>
+
+      <li><strong>Linga Purana</strong> (लिङ्ग पुराण) - Core theological text on Shiva as the Supreme Linga (cosmic
+        pillar of light). Describes Mahakaleshwar as the linga that faces south toward the realm of Yama and establishes
+        the cosmological connection between lingas and the Navagrahas. Translated by J.L. Shastri, Ancient Indian
+        Tradition &amp; Mythology Series.</li>
+
+      <li><strong>Matsya Purana</strong> (मत्स्य पुराण) - One of the oldest Puranas (~250 CE). Contains detailed
+        descriptions of Somnath's original construction in gold by the Moon-god Soma, and the earliest astronomical
+        descriptions of the relationship between Shiva's shrines and lunar phases.</li>
+
+      <li><strong>Padma Purana</strong> (पद्म पुराण) - Contains the Swarga Khanda with detailed accounts of pilgrimage
+        to Kedarnath and Srisailam, and the fruits of each Jyotirlinga darshan. The text prescribes: <span
+          class="ref-quote">"One who beholds Mallikarjuna at Srisailam attains the merit of Ashvamedha yajna a thousand
+          times."</span></li>
+
+      <li><strong>Kurma Purana</strong> (कूर्म पुराण) - Contains the Umasamhita section, one of the oldest textual
+        accounts of Shiva's cosmic form. Describes the twelve Jyotirlingas as the twelve Adityas (solar forms) of Shiva
+        - a key text for understanding the solar-Jyotirlinga connection.</li>
+
+      <li><strong>Brahma Purana</strong> (ब्रह्म पुराण) - Contains the Gautami Mahatmya, the primary sacred text of the
+        Godavari river and its origin at Trimbakeshwar. Also contains the earliest full description of the Rameshwaram
+        shrine and Rama's installation of the linga.</li>
+
+      <li><strong>Vayu Purana</strong> (वायु पुराण) - One of the most ancient Puranas (~300 CE). Contains the Shatarudra
+        Samhita listing Shiva's 1,000 names including Mahakala, Nageshwara, and Vaidyanatha. Establishes the
+        cosmological framework for Rudra as lord of the Navagrahas.</li>
+
+      <li><strong>Narada Purana</strong> (नारद पुराण) - Contains a systematic Jyotirlinga pilgrimage guide (Kshetra
+        Mahatmya) with specific mantras and ritual prescriptions for each shrine. The text explicitly maps each linga to
+        a specific nakshatra (lunar mansion) as well as a graha.</li>
+
+      <li><strong>Agni Purana</strong> (अग्नि पुराण) - Contains the Shaiva Agama section with detailed descriptions of
+        the five elements as manifested in the Pancha Bhuta Lingas, and their relationship to the twelve Jyotirlingas as
+        the complete planetary mandala.</li>
+
+      <div class="ref-category"><span class="en">II. UPANISHADS</span><span class="hi">II. उपनिषद</span></div>
+
+      <li><strong>Shiva Upanishad / Atharvasiras Upanishad</strong> (अथर्वशिरस उपनिषद) - Declares: <span
+          class="ref-quote">"Aham Rudro aham Vishnur aham Brahma aham Prajapati" - I am Rudra, I am Vishnu, I am Brahma,
+          I am Prajapati.</span> Fundamental to understanding Shiva as the self-manifesting cosmic consciousness behind
+        each Jyotirlinga.</li>
+
+      <li><strong>Kaivalya Upanishad</strong> (कैवल्य उपनिषद) - A Shaiva Upanishad that defines liberation (kaivalya) as
+        direct identification with Shiva's consciousness: <span class="ref-quote">"Sa brahma sa shivah sa indrah... sa
+          eva sarvam yad bhutam yac ca bhavyam" - He is Brahma, he is Shiva... he is all that has been and all that will
+          be.</span> Core text for understanding Kashi Vishwanath's liberation doctrine.</li>
+
+      <li><strong>Brihadaranyaka Upanishad</strong> (बृहदारण्यक उपनिषद) - The Yajnavalkya-Maitreyi dialogue contains the
+        foundational cosmological framework for planetary consciousness and the soul's relationship to the Navagrahas.
+        Maharishi Yajnavalkya taught at Varanasi - directly linking Kashi's Jupiter energy to the Upanishadic wisdom
+        tradition.</li>
+
+      <li><strong>Shvetashvatara Upanishad</strong> (श्वेताश्वतर उपनिषद) - The primary philosophical Upanishad of Shaiva
+        non-dualism, describing Rudra-Shiva as the one cosmic reality behind all planetary phenomena: <span
+          class="ref-quote">"Eko hi Rudro na dvitiyaya tasthur" - Rudra is truly One; he does not permit a
+          second.</span> Essential for understanding why all planets ultimately converge in the Jyotirlinga.</li>
+
+      <li><strong>Mahanarayana Upanishad</strong> (महानारायण उपनिषद) - Contains the Shatarudriya hymn, the original
+        liturgical source for Shiva's 108 names corresponding to 108 natural phenomena, planetary forces, and sacred
+        geographies. Recited daily at all 12 Jyotirlinga shrines.</li>
+
+      <div class="ref-category"><span class="en">III. AGAMAS, TANTRAS &amp; RITUAL TEXTS</span><span class="hi">III.
+          आगम, तंत्र और पूजा ग्रंथ</span></div>
+
+      <li><strong>Kamika Agama</strong> (कामिक आगम) - The foundational Shaiva Agama text governing temple construction,
+        linga installation, and ritual procedure. Establishes the canonical form of the Jyotirlinga as svayambhu
+        (self-manifested) and prescribes the exact rituals for Abhisheka, including the 16 upacharas (ritual offerings)
+        and their planetary correspondences.</li>
+
+      <li><strong>Suprabhedagama</strong> (सुप्रभेदागम) - Contains the ritual prescriptions for Navagraha propitiation
+        through Shivalinga worship. Establishes that worship of a specific Jyotirlinga at specific astronomical hours
+        and with specific materials constitutes direct planetary remediation.</li>
+
+      <li><strong>Kaulajnananirnaya</strong> (कौलज्ञाननिर्णय) - Attributed to Matsyendranath (9th–10th century CE).
+        Contains the tantric cosmological framework for understanding Shiva's 12 forms as corresponding to the 12 signs
+        of the zodiac - a key text for the Rashi-Jyotirlinga correspondence system.</li>
+
+      <div class="ref-category"><span class="en">IV. SAINT POETS &amp; BHAKTI LITERATURE</span><span class="hi">IV.
+          संत-कवि और भक्ति साहित्य</span></div>
+
+      <li><strong>Vachanas of Akka Mahadevi</strong> (अक्का महादेवी, 12th c. CE) - <span class="ref-quote">"O
+          Channamallikarjuna, you are the jasmine of jasmine, the sweetest of the sweet..."</span> The saint-poet's 430
+        Kannada vachanas addressed to Mallikarjuna represent the purest expression of Venus-bhakti - divine love
+        expressed through sensory beauty. Translated by A.K. Ramanujan in "Speaking of Shiva," Penguin Classics.</li>
+
+      <li><strong>Manikkavachakar - Tiruvachakam</strong> (திருவாசகம், 9th c. CE) - Tamil devotional hymns to Shiva
+        containing passages describing the sacred geography of southern Jyotirlingas including Rameshwaram: <span
+          class="ref-quote">"The one who dances in the burning ground, who wears the crescent moon, who holds
+          fire..."</span> One of the Panniru Thirumurai, foundational Tamil Shaiva canon.</li>
+
+      <li><strong>Tulsidas - Ramcharitmanas</strong> (रामचरितमानस, 16th c. CE) - Avadhi devotional retelling of the
+        Ramayana containing the definitive literary account of Rama's installation of the linga at Rameshwaram: <span
+          class="ref-quote">"Raghupati Raghava Raja Ram, Siya Ram Siya Ram..."</span> Tulsidas's account is the most
+        widely circulated version of the Rameshwaram origin story in North India.</li>
+
+      <li><strong>Kabir - Bijak and Dohas</strong> (कबीर दास, 15th c. CE) - Contains the most challenging critique of
+        rote pilgrimage combined with the deepest endorsement of inner darshan: <span class="ref-quote">"Kashi Kabira
+          mar gaya, Ram kahyo nahi..." - If one dies in Kashi without Rama's name in the heart, all pilgrimage is
+          hollow.</span> Essential counterpoint for understanding Kashi Vishwanath's Jupiter energy as inner wisdom, not
+        external ceremony.</li>
+
+      <li><strong>Tukaram - Abhangas</strong> (तुकाराम, 17th c. CE) - Marathi devotional poetry (4,500+ abhangas)
+        addressing Vitthal/Shiva, including several compositions on Bhimashankar, Trimbakeshwar, and Grishneshwar.
+        Tukaram's own transcendent experience occurred near the Bhima river - flowing from Bhimashankar.</li>
+
+      <li><strong>Dnyaneshwar - Dnyaneshwari</strong> (ज्ञानेश्वर, 13th c. CE) - Commentary on the Bhagavad Gita in
+        Marathi. Contains extensive philosophical commentary on the nature of OM (directly relevant to Omkareshwar) and
+        on Shiva as the cosmic consciousness underlying all planetary motion. Dnyaneshwar attained samadhi at Alandi
+        near the Bhima river.</li>
+
+      <li><strong>Basavanna - Vachanas</strong> (बसवण्ण, 12th c. CE) - Founder of the Lingayat tradition; his vachanas
+        addressed to "Koodala Sangama Deva" (Shiva at the confluence) contain the social-radical theology of worshipping
+        Shiva in the linga one carries within - a theology born at the base of Srisailam's sacred mountain.</li>
+
+      <li><strong>Adi Shankaracharya - Dvadasha Jyotirlinga Stotram</strong> (8th c. CE) - The foundational twelve-verse
+        hymn naming all Jyotirlingas, composed at Kashi Vishwanath. Also relevant: his Shivanandalahari (100 verses on
+        Shiva's ocean of bliss) and Soundarya Lahari (100 verses to Devi). Shankaracharya received initiation at
+        Omkareshwar and attained samadhi at Kedarnath.</li>
+
+      <li><strong>Mirabai - Padas</strong> (मीराबाई, 16th c. CE) - Rajput mystic saint whose devotional songs to
+        Shiva-Giridhara contain Venus-bhakti parallels to Akka Mahadevi: the soul as bride of the divine, devotion as
+        erotic surrender. Her pilgrimage to Dwarka (near Nageshwar) forms a geographic axis of her devotional life.</li>
+
+      <li><strong>Ramana Maharshi - Collected Works</strong> (20th c. CE) - The sage of Arunachala (itself considered a
+        Shiva-hill equivalent) wrote: <span class="ref-quote">"The significance of the Jyotirlinga is not the stone but
+          the light - and the light is your own awareness."</span> His commentaries on the nature of jyoti as pure
+        self-awareness remain the most precise modern interpretation of the Jyotirlinga principle.</li>
+
+      <li><strong>Swami Vivekananda - Letters from Varanasi</strong> (1890 CE) - Vivekananda's letters written from
+        Kashi describe his transformative experience at Kashi Vishwanath: <span class="ref-quote">"Here at last I
+          understood what liberation means - not escape from the world but the recognition that this world is Shiva's
+          dance floor."</span> Raja Yoga and Jnana Yoga (Complete Works, Vol. I &amp; II) contain philosophical
+        extensions of the Jyotirlinga consciousness.</li>
+
+      <div class="ref-category"><span class="en">V. CLASSICAL JYOTISH &amp; ASTRONOMICAL TEXTS</span><span class="hi">V.
+          शास्त्रीय ज्योतिष और खगोलशास्त्र ग्रंथ</span></div>
+
+      <li><strong>Parasara Hora Shastra</strong> (पाराशर होरा शास्त्र) - Foundational Vedic astrology text by Maharishi
+        Parasara. Contains the Graha Shanti (planetary pacification) section prescribing specific temple pilgrimage for
+        each planet, with Shiva temples named as the supreme remedy for Saturn, Rahu, and Ketu. Translated by R.
+        Santhanam, Ranjan Publications.</li>
+
+      <li><strong>Surya Siddhanta</strong> (सूर्य सिद्धांत, 4th–5th c. CE) - India's foundational astronomical treatise.
+        Establishes Ujjain (Mahakaleshwar) as the Prime Meridian (Madhyarekha) for all Indian astronomical calculation.
+        The text declares Ujjain to be the geographic midpoint between the earth's poles and equator - a cosmological
+        claim that makes Mahakaleshwar's Saturn-time connection literally astronomical.</li>
+
+      <li><strong>Brihat Parashara Hora Shastra</strong> - Extended version containing the Navagraha Stotra, which names
+        the presiding deities of each planet and the specific sacred sites for their propitiation. The text directly
+        names Somnath for Moon, Mahakaleshwar for Saturn, and Kashi Vishwanath for Jupiter.</li>
+
+      <li><strong>Muhurta Chintamani</strong> (मुहूर्त चिन्तामणि) - Classical text on auspicious timing for pilgrimage.
+        Contains detailed Jyotirlinga-specific recommendations: <span class="ref-quote">"On Chaturdashi Krishna Paksha,
+          the hour of Mercury at Omkareshwar is equal in merit to one thousand ordinary days of worship."</span></li>
+
+      <div class="ref-category"><span class="en">VI. MODERN SCHOLARSHIP &amp; ARCHAEOLOGY</span><span class="hi">VI.
+          आधुनिक शोध और पुरातत्व</span></div>
+
+      <li><strong>Dr. David Frawley (Vamadeva Shastri)</strong> - <em>Astrology of the Seers</em>, Lotus Press;
+        <em>Gods, Sages and Kings</em>. The most comprehensive modern Jyotish analysis of planetary temples and
+        Navagraha pilgrimage. Frawley establishes the sacred geography of India as a functioning astrological
+        instrument.
+      </li>
+
+      <li><strong>Dr. B.V. Raman</strong> - <em>Planetary Influences on Human Affairs</em>; <em>A Manual of Hindu
+          Astrology</em>, UBS Publishers. Foundational modern Jyotish texts on planetary rulership and remedial measures
+        through shrine worship.</li>
+
+      <li><strong>Wendy Doniger</strong> - <em>Shiva: The Erotic Ascetic</em>, Oxford University Press; <em>Hindu
+          Myths</em>, Penguin Classics. The most rigorous Western academic analysis of Shaiva mythology, including
+        detailed treatment of the Jyotirlinga origin stories.</li>
+
+      <li><strong>Diana Eck</strong> - <em>Banaras: City of Light</em>, Princeton University Press. The definitive
+        scholarly study of Varanasi as Jupiter's sacred city, documenting its cosmological structure, pilgrimage
+        geography, and liberation theology.</li>
+
+      <li><strong>Archaeological Survey of India</strong> - Reports on Somnath temple reconstructions (1951–present),
+        Rameshwaram temple corridor (UNESCO documentation), and Ellora-Grishneshwar complex. Published by ASI, New
+        Delhi.</li>
+
+      <li><strong>K.N. Rao</strong> - <em>Yogis, Destiny and the Wheel of Time</em>, Vani Publications. Jyotish
+        interpretations of pilgrimage as karmic resolution and planetary shrine worship as predictive remedy.</li>
+
+      <li><strong>National Disaster Management Authority (NDMA), India</strong> - 2013 Kedarnath Flood Assessment
+        Report. Documents the survival of the ancient temple structure amid catastrophic flooding that destroyed
+        everything within 500 metres. The boulder that appeared behind the temple during the flood is documented in this
+        report.</li>
+
+    </ul>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="om-symbol" style="font-size:32px; margin-bottom:16px;">ॐ नमः शिवाय</div>
+    <p><span class="en">OM NAMAH SHIVAYA · THE LIGHT OF SHIVA PERVADES ALL PLANETS</span><span class="hi">ॐ नमः शिवाय ·
+        शिव का प्रकाश समस्त ग्रहों में व्याप्त है</span></p>
+    <p style="margin-top:8px; font-size:9px; letter-spacing:2px; opacity:0.3;"><span class="en">A SACRED JYOTISH
+        ANALYSIS · RESEARCH-BASED DEVOTIONAL WRITING</span><span class="hi">एक पवित्र ज्योतिष विश्लेषण · शोध-आधारित
+        भक्ति लेखन</span></p>
+  </footer>
+
+
+  <script>
+    // ============================================================
+    //  SHRINE DATA -  timelines, before/after, meditation
+    // ============================================================
+    const SD = [
+      {
+        id: 1, name: "Somnath", planet: "Moon (Chandra)", planetColor: "#A8C4E0",
+        lat: 20.9, lon: 70.4, loc: "Prabhas Patan · Gujarat",
+        med: {
+          day: "Monday -  especially Purnima (full moon) and Ekadashi",
+          time: "Before sunrise or at moonrise",
+          mantra: "ॐ नमः शिवाय · ॐ सोमनाथाय नमः\nOm Namah Shivaya · Om Somnathaya Namah",
+          vis: "Sit facing a body of water. Visualise a column of silver moonlight descending through your crown, filling your chest. Feel it cool grief and soften old wounds. The Moon does not fight the night -  it simply glows within it.",
+          reps: "27 or 108 repetitions (lunar numbers)",
+          heals: "Emotional turbulence, grief, mother-wounds, insomnia, anxiety, weak Moon in the birth chart"
+        },
+        tl: [
+          { y: "~3000 BCE", e: "Moon builds the first temple in gold -  Soma's penance site at the sacred shore", t: "ancient" },
+          { y: "700 BCE", e: "Prabhasa Kshetra mentioned in Rigvedic texts as a sacred confluence", t: "ancient" },
+          { y: "649 CE", e: "Chinese pilgrim Hiuen Tsang documents a prosperous temple city here", t: "ancient" },
+          { y: "1026 CE", e: "Mahmud of Ghazni destroys the temple; 50,000 defenders killed", t: "destruction" },
+          { y: "1026 CE", e: "Rebuilt in silver within months by kings Bhoj & Bhimdev", t: "rebuild" },
+          { y: "1297 CE", e: "Demolished by Alauddin Khilji's general Ulugh Khan", t: "destruction" },
+          { y: "1706 CE", e: "Destroyed again by Aurangzeb", t: "destruction" },
+          { y: "1783 CE", e: "Rebuilt by the great queen Ahalya Bai Holkar at an adjacent site", t: "rebuild" },
+          { y: "1951 CE", e: "Current temple consecrated by Sardar Vallabhbhai Patel at India's independence", t: "modern" }
+        ],
+        ancient: "A temple of gold rising where ocean, sacred river and divine stream converge. The ancient priests said the tide bows its head at Somnath's foundation before dawn. The sea itself was said to recede slightly during Shiva's abhishek -  as though the ocean stood in reverence.",
+        modern: "Today a gleaming white limestone temple stands directly on the shoreline, rebuilt in 1951 in the Chaulukya style. The Jyotirlinga rests in a silver casket. The evening Aarti at the seafront is extraordinary: conch shells, oil lamps, salt wind off the Arabian Sea, and the sound of Om Namah Shivaya echoing over the water. The 'eternal flame' has burned since consecration."
+      },
+      {
+        id: 2, name: "Mallikarjuna", planet: "Venus (Shukra)", planetColor: "#F4B8D4",
+        lat: 16.1, lon: 78.9, loc: "Srisailam · Andhra Pradesh",
+        med: {
+          day: "Friday -  Shukravara, Venus's sacred day",
+          time: "Evening, at or just after sunset",
+          mantra: "ॐ नमः शिवाय · ॐ मल्लिकार्जुनाय नमः\nOm Namah Shivaya · Om Mallikarjunaya Namah",
+          vis: "Sit surrounded by fragrant flowers or jasmine incense. Visualise Shiva and Parvati seated together on a forested mountain -  not as cosmic authority, but as a couple who stayed for love. Feel what unconditional love feels like when it asks for nothing in return.",
+          reps: "16 or 108 repetitions (16 is Venus's number)",
+          heals: "Troubled relationships, artistic blocks, lack of joy, infertility, broken marriages, Venus afflictions in chart"
+        },
+        tl: [
+          { y: "~3rd c. BCE", e: "Satavahana dynasty -  earliest inscriptions at Srisailam as a sacred hill", t: "ancient" },
+          { y: "5th c. CE", e: "Kalachuri dynasty inscriptions found; temple complex formally documented", t: "ancient" },
+          { y: "12th c. CE", e: "Vikramaditya VI of Western Chalukyas builds major stone temple structures", t: "rebuild" },
+          { y: "14th–15th c.", e: "Vijayanagara Empire's major expansion; Harihara & Bukka patronage", t: "rebuild" },
+          { y: "12th c. CE", e: "Poet-saint Akka Mahadevi wanders to Srisailam singing of Shiva as her true husband", t: "ancient" },
+          { y: "18th c. CE", e: "Maratha donations under Chatrapati Shahu; temple patronage at its peak", t: "rebuild" },
+          { y: "2011 CE", e: "Srisailam dam creates India's second-largest reservoir -  temple now overlooks the water", t: "modern" }
+        ],
+        ancient: "A mountain so thick with jasmine that pilgrims pushed through curtains of white blossoms to reach the summit. Deer grazed in the ancient courtyard. The sound of waterfalls accompanied the temple bells, and the 12th-century poet Akka Mahadevi wandered here naked, singing to Shiva -  and the forest itself offered her shelter.",
+        modern: "The Mallikarjuna temple today is a grand Dravidian complex with towering gopurams and a walled courtyard where two lingas -  Shiva and Parvati -  are worshipped side by side. It now overlooks the vast Srisailam reservoir, a strange and beautiful collision of ancient devotion and modern engineering. On full moon nights, lakhs of pilgrims make the hilltop pilgrimage by moonlight."
+      },
+      {
+        id: 3, name: "Mahakaleshwar", planet: "Saturn (Shani)", planetColor: "#8B8FA8",
+        lat: 23.2, lon: 75.8, loc: "Ujjain · Madhya Pradesh",
+        med: {
+          day: "Saturday -  Shanivara, Saturn's day",
+          time: "Pre-dawn, 3–5 AM -  the Brahma Muhurta when Saturn's lesson is clearest",
+          mantra: "ॐ नमः शिवाय · ॐ महाकालेश्वराय नमः\nOm Namah Shivaya · Om Mahakaleshwaraya Namah",
+          vis: "Sit in darkness with a single lamp. Feel the weight of time -  every year, every loss, every unfulfilled expectation. Do not resist it. Breathe it in. Then visualise a slow, deep fire consuming all of it -  not violently, but with patience. What remains is pure awareness.",
+          reps: "108 repetitions -  the number of karmic cycles",
+          heals: "Fear of death, heavy karma, Sade Sati period, delay and obstacles, grief, unresolved past-life debt"
+        },
+        tl: [
+          { y: "~4th c. CE", e: "Kalidasa praises Mahakaleshwar in Meghaduta -  called Ujjain's supreme glory", t: "ancient" },
+          { y: "7th c. CE", e: "Bana describes it in Harshacharita; Ujjain is India's prime meridian and cosmic clock", t: "ancient" },
+          { y: "1107 CE", e: "Temple damaged in Paramara-Chalukya warfare", t: "destruction" },
+          { y: "1235 CE", e: "Demolished by Iltutmish of Delhi Sultanate; Ujjain's cultural heart shattered", t: "destruction" },
+          { y: "1736 CE", e: "Ranoji Scindia (Maratha) builds the current temple structure; major restoration", t: "rebuild" },
+          { y: "1886 CE", e: "Scindia rulers donate silver plating for the sanctum ceiling", t: "rebuild" },
+          { y: "Modern", e: "Bhasma Aarti now live-streamed online; 5,000+ devotees gather daily at 4 AM", t: "modern" }
+        ],
+        ancient: "Ujjain was the zero meridian of the ancient world -  the point from which all time radiated. In that city of time, Mahakal was not merely a temple but a presence: the darkness itself worshipped, the cremation ash itself sacred, the god who stood south-facing, looking at Yama's realm. To stand before Mahakal at dawn was to stand at the pivot of the cosmos.",
+        modern: "The Bhasma Aarti begins at 4 AM in total darkness. Priests bathe the linga in sacred ash while chanting in lamplight. Five thousand people press together outside in silence. No photography is allowed in the inner sanctum. Then the doors open, and the queue of 100,000 daily pilgrims begins. By common consensus of pilgrims across India, it is the most emotionally overwhelming ritual experience in any temple."
+      },
+      {
+        id: 4, name: "Omkareshwar", planet: "Mercury (Budh)", planetColor: "#90D4A0",
+        lat: 22.2, lon: 76.1, loc: "Mandhata Island · Madhya Pradesh",
+        med: {
+          day: "Wednesday -  Budhavara, Mercury's day",
+          time: "Morning, before sunrise",
+          mantra: "ॐ (sustained chanting) · ॐ ओंकारेश्वराय नमः\nOM (sustained) · Om Omkareshwaraya Namah",
+          vis: "Chant OM for three full breath-cycles -  the longest OM you can produce. Feel the vibration begin in your navel (A), rise into your chest (U), and dissolve at the crown (M). The silence after is the real meditation. Stay in that silence. Mercury's gift is the mind that can finally rest.",
+          reps: "17 or 54 repetitions (Mercury's number is 17)",
+          heals: "Learning difficulties, anxiety, speech problems, scattered mind, Mercury retrograde effects, blocked creativity"
+        },
+        tl: [
+          { y: "Ancient", e: "Narmada valley: OM-shaped island recognised as svayambhu (self-manifested) sacred site", t: "ancient" },
+          { y: "8th c. CE", e: "Adi Shankaracharya receives Vedanta initiation from Govindapadacharya in a cave here", t: "ancient" },
+          { y: "9th–10th c.", e: "Rashtrakuta and Paramara patronage; stone temples built on the island", t: "rebuild" },
+          { y: "13th c. CE", e: "Structures added under Yadava dynasty before Delhi Sultanate raids", t: "rebuild" },
+          { y: "17th–18th c.", e: "Maratha restoration of both Omkareshwar and Amreshwar temples", t: "rebuild" },
+          { y: "1984–2003", e: "Narmada Bachao Movement fights Indira Sagar Dam -  island temple protected", t: "modern" },
+          { y: "Present", e: "Aerial and satellite images confirm the OM shape of Mandhata island", t: "modern" }
+        ],
+        ancient: "An island shaped like the sound that preceded creation, visited by the Narmada on both sides in a complete parikrama -  as though the river itself worships it. The ancients said: to stand at the confluence where the two streams rejoin after circling the island is to stand at the moment OM completes itself, and the manifested world dissolves back into sound.",
+        modern: "Omkareshwar today is one of the most serene Jyotirlinga sites -  the island is still largely forested, and the Narmada parikrama on foot takes about 7 km around the OM-shaped island. Two temples face each other: Omkareshwar and Amreshwar. Thousands do the parikrama barefoot at dawn. From a satellite image, the island's OM shape is completely unmistakable."
+      },
+      {
+        id: 5, name: "Kedarnath", planet: "Mars (Mangal)", planetColor: "#E07060",
+        lat: 30.7, lon: 79.1, loc: "Rudraprayag · Uttarakhand",
+        med: {
+          day: "Tuesday -  Mangalvara, Mars's day",
+          time: "Sunrise -  Martian energy peaks at the first light",
+          mantra: "ॐ नमः शिवाय · ॐ केदारनाथाय नमः\nOm Namah Shivaya · Om Kedarnathaya Namah",
+          vis: "Sit upright -  warrior posture, spine straight. Visualise fire rising from the base of your spine to the crown. Feel courage that does not need an enemy to justify itself. Then place before the fire every wound you inflicted while believing you were right. Watch it burn without violence.",
+          reps: "21 repetitions (Mars's number)",
+          heals: "Guilt and soul-wounds of the warrior, blocked courage, aggression, fraternal conflict, accidents, wounded masculinity"
+        },
+        tl: [
+          { y: "~3200 BCE", e: "Pandavas seek Shiva at Kedarnath after Kurukshetra war (Mahabharata / mythological time)", t: "ancient" },
+          { y: "8th c. CE", e: "Adi Shankaracharya rebuilds the stone temple; attains samadhi here in 820 CE", t: "rebuild" },
+          { y: "Medieval", e: "Nambudiri Brahmin priests from Kerala serve as Rawals -  tradition unchanged today", t: "ancient" },
+          { y: "1803 CE", e: "Major earthquake damages the temple; Garhwal rulers fund immediate rebuilding", t: "destruction" },
+          { y: "2013, June 16", e: "Catastrophic flash floods kill 5,700+ in the valley; the ancient temple survives intact", t: "destruction" },
+          { y: "2013 CE", e: "A massive boulder appears directly behind the temple, believed to have deflected the floods", t: "ancient" },
+          { y: "2017–19 CE", e: "Central government reconstruction of surrounding complex; helipad installed", t: "modern" }
+        ],
+        ancient: "A stone temple at the roof of the world, surrounded by glaciers, accessible only five months before snow seals it until spring. The ancient priests would seal the linga before winter and Shiva was said to move to Ukhimath in the valley below -  as though even a god sometimes needed to come down from the cold.",
+        modern: "Kedarnath is one of the most dramatic pilgrimages on earth: the final 16 km can only be walked, ridden on pony, or flown by helicopter. Hundreds of thousands come between May and October. The stone temple -  rebuilt by Shankaracharya in the 8th century -  survived the 2013 megaflood completely intact, a fact that has intensified its devotional power immeasurably. The boulder that appeared behind it during the flood is now also worshipped."
+      },
+      {
+        id: 6, name: "Bhimashankar", planet: "Sun (Surya)", planetColor: "#F4A830",
+        lat: 19.1, lon: 73.5, loc: "Sahyadri · Maharashtra",
+        med: {
+          day: "Sunday -  Ravivara, the Sun's day",
+          time: "At sunrise -  facing east",
+          mantra: "ॐ नमः शिवाय · ॐ भीमशंकराय नमः\nOm Namah Shivaya · Om Bhimashankaraya Namah",
+          vis: "Sit facing the rising sun. Visualise the golden disc entering your heart -  not its heat, but its light. Feel every place where pride has hardened into arrogance soften and become warmth. Feel every place where you have dimmed yourself out of fear begin to glow. The true Sun does not demand to be seen -  it simply shines.",
+          reps: "12 Surya Namaskara, then 108 Om Namah Shivaya",
+          heals: "Ego inflation or deflation, poor relationship with father, weak identity, lack of vitality, Sun afflictions, Pitra Dosha"
+        },
+        tl: [
+          { y: "Ancient", e: "Sahyadri forest shrine; Bhima river origin site mentioned in the Shiva Purana", t: "ancient" },
+          { y: "12th–13th c.", e: "Hemadpanthi-style temple built using interlocking stone (no mortar) construction", t: "rebuild" },
+          { y: "18th c. CE", e: "Peshwa Nana Sahib funds the major shikhara and temple expansion", t: "rebuild" },
+          { y: "1866 CE", e: "British survey documents the temple and documents the surrounding forest ecology", t: "modern" },
+          { y: "1985 CE", e: "Bhimashankar Wildlife Sanctuary declared -  home of the Indian Giant Squirrel", t: "modern" },
+          { y: "2012 CE", e: "Temple Trust established; pilgrim facilities built while the 6 km forest trek is preserved", t: "modern" }
+        ],
+        ancient: "A temple that the forest grew around -  not a temple that pushed the forest back. In ancient accounts, the Bhimashankar shrine was simply a light, glimpsed between the trees when one walked far enough into the Sahyadri hills. The Bhima river, born from Shiva's own perspiration in battle, ran through the roots of those same trees.",
+        modern: "Bhimashankar is unusual: reaching it requires a 6 km forest trek through the wildlife sanctuary -  there is no road to the shrine. The temple sits amid dense forest at 1,000m elevation. During the monsoon, the Sahyadri turns electric green, waterfalls fill the air, and the Indian Giant Squirrel (Maharashtra's state animal) is visible in the canopy. The temple itself is compact, ancient-stone Hemadpanthi, and feels genuinely embedded in wild nature."
+      },
+      {
+        id: 7, name: "Kashi Vishwanath", planet: "Jupiter (Guru)", planetColor: "#F0D080",
+        lat: 25.3, lon: 83.0, loc: "Varanasi · Uttar Pradesh",
+        med: {
+          day: "Thursday -  Guruvara, Jupiter's day",
+          time: "Early morning; or during the Ganga Aarti at dusk",
+          mantra: "ॐ नमः शिवाय · ॐ विश्वनाथाय नमः\nOm Namah Shivaya · Om Vishwanathaya Namah",
+          vis: "Sit quietly and ask: 'What do I know that I cannot prove?' Not intellectual knowledge -  the knowing that lives in the body, in the silence between thoughts. Jupiter's gift is not information. It is trust. Let whatever arises be the teaching.",
+          reps: "19 or 108 repetitions (Jupiter's number is 19 in Jyotish)",
+          heals: "Loss of direction, blocked wisdom, guru-wounds, loss of faith, Jupiter Mahadasha challenges, childlessness, Sagittarius/Pisces afflictions"
+        },
+        tl: [
+          { y: "~11th c. BCE", e: "Kashi kingdom flourishes; Ganga-bank temple tradition well established in Rigvedic era", t: "ancient" },
+          { y: "1194 CE", e: "Temple destroyed by Qutb-ud-din Aibak (Muhammad Ghori's general)", t: "destruction" },
+          { y: "1585 CE", e: "Rebuilt by Todarmal, Akbar's minister, at a slightly different location", t: "rebuild" },
+          { y: "1669 CE", e: "Demolished by Aurangzeb; Gyanvapi Mosque built on its platform (stands to this day)", t: "destruction" },
+          { y: "1777–80 CE", e: "Rebuilt by Ahalya Bai Holkar of Indore -  the current structure", t: "rebuild" },
+          { y: "1835 CE", e: "Ranjit Singh of Punjab donates 1 tonne of gold for the shikhara's gold plating", t: "rebuild" },
+          { y: "2021–22 CE", e: "Kashi Vishwanath Corridor opens; 5 lakh sq ft complex unveiled December 2022", t: "modern" }
+        ],
+        ancient: "The city that rests on Shiva's trident, above all floods, above all dissolution. In ancient Kashi, even the lanes were a pilgrimage -  each step was a step toward liberation. Pilgrims walked barefoot through the maze of ghats knowing that should they die anywhere within the city's limits, Shiva himself would whisper the Taraka mantra into their ear.",
+        modern: "Kashi Vishwanath sits within the world's most intense spiritual environment. The 2022 Corridor opens the shrine to the Ganga -  for the first time in centuries, worshippers can see the river from the temple. At the burning ghats 500 metres away, cremations proceed 24 hours a day. The morning puja at 4 AM draws thousands. Navigating the narrow, incense-filled centuries-old lanes to the shrine is itself a meditation."
+      },
+      {
+        id: 8, name: "Trimbakeshwar", planet: "Rahu (North Node)", planetColor: "#B090C8",
+        lat: 19.9, lon: 73.5, loc: "Nashik · Maharashtra",
+        med: {
+          day: "Saturday, or during solar/lunar eclipses -  Rahu's peak power",
+          time: "Midnight -  Rahu governs the darkest hours",
+          mantra: "ॐ नमः शिवाय · ॐ त्र्यंबकेश्वराय नमः\nOm Namah Shivaya · Om Tryambakeshwaraya Namah",
+          vis: "Sit in candlelight. Close your eyes. Bring to mind your deepest craving -  the obsession that haunts you. Instead of pushing it away, look at it directly. Ask: 'What am I really hungry for beneath this?' Peel back one layer. Then another. Rahu's gift is the third eye that sees through desire to the soul's true need.",
+          reps: "18 repetitions (Rahu's number) -  with long silence between each",
+          heals: "Kalsarpa Dosha, Pitru Dosha (ancestral karma), obsessive patterns, illusions, Rahu Mahadasha, inexplicable ancestral fears"
+        },
+        tl: [
+          { y: "Ancient", e: "Gautama Rishi's ashrama at Brahmagiri mountain; origin of the Godavari river", t: "ancient" },
+          { y: "Ancient", e: "Mahabharata references Trimbak as site of ancestral rites and karmic dissolution", t: "ancient" },
+          { y: "5th c. CE", e: "Shrines at Brahmagiri documented; Godavari Kumbh Mela tradition formally established", t: "ancient" },
+          { y: "13th c. CE", e: "Temple structures built under Yadava dynasty patronage", t: "rebuild" },
+          { y: "1235 CE", e: "Delhi Sultanate raids damage the complex", t: "destruction" },
+          { y: "1755–86 CE", e: "Peshwa Nana Sahib builds the current magnificent black-stone temple -  finest of the era", t: "rebuild" },
+          { y: "Every 12 yrs", e: "Nashik-Trimbak Kumbh Mela: tens of millions gather; world's largest human gathering", t: "modern" }
+        ],
+        ancient: "At the foot of Brahmagiri mountain, where the Godavari springs from the rock itself, the ancients believed the river was Ganga herself in the South -  the same liberating water, running through the veins of the Deccan plateau. Pilgrims came not for boons but to be released from debts they had not themselves incurred.",
+        modern: "Trimbakeshwar is famous for two rituals found nowhere else in Hinduism: the three-faced linga (Brahma, Vishnu, Mahesh in one stone), and the exclusive Narayan Nagbali puja -  a three-day ceremony to dissolve ancestral karma and serpent curses, which is permitted only here. The black-stone Peshwa temple is architecturally one of the most beautiful in Maharashtra. During the Nashik Kumbh Mela, the region's population swells to tens of millions."
+      },
+      {
+        id: 9, name: "Vaidyanath", planet: "Ketu (South Node)", planetColor: "#C0A880",
+        lat: 24.5, lon: 86.7, loc: "Deoghar · Jharkhand",
+        med: {
+          day: "Thursday or spiritual occasions -  Ketu transcends planetary days",
+          time: "Any time; best in the hour before dawn",
+          mantra: "ॐ नमः शिवाय · ॐ वैद्यनाथाय नमः\nOm Namah Shivaya · Om Vaidyanathaya Namah",
+          vis: "Visualise yourself as Ravana in the moment before he offered his last head -  brilliant, gifted, utterly devoted, and still not free. Feel the one thing you cannot let go of. Now offer it, in imagination, to the fire. What remains when the offering is complete? That remainder is Ketu's gift: the part of you that was always free.",
+          reps: "7 repetitions (Ketu's number), then deep silent meditation",
+          heals: "Chronic illness of unknown origin, spiritual stagnation, Ketu Mahadasha, past-life karma as physical disease, detachment difficulties"
+        },
+        tl: [
+          { y: "Ancient", e: "Ravana's penance at Deoghar ('Abode of Gods') narrated in Shiva Purana", t: "ancient" },
+          { y: "Medieval", e: "Pilgrimage well-established by 10th century; referenced in tantric texts", t: "ancient" },
+          { y: "1596 CE", e: "Akbar grants tax-free status to the temple town -  one of few temples given this honour", t: "ancient" },
+          { y: "18th c. CE", e: "Temple patronised and expanded by Gidhour Raj family of Jharkhand", t: "rebuild" },
+          { y: "19th c. CE", e: "Shravan Mela formalised as one of India's largest pilgrimages", t: "modern" },
+          { y: "Annual", e: "3–4 million kanwariyas walk 100+ km from Sultanganj with Ganga water for Shravan Mela", t: "modern" }
+        ],
+        ancient: "Deoghar -  the Abode of Gods -  where Ravana's ten heads burned like ten suns on the sacred fire, one by one, each a universe of knowledge surrendered to love. The ancients said the wound in the earth where the linga became fixed still pulses with Ravana's longing -  the most gifted devotee who ever lived, stopped by the smallest trick of grace.",
+        modern: "Vaidyanath is unusual in that it lives its devotion in the streets. During Shravan Mela, the roads fill with millions of saffron-clad kanwariyas who have walked 100+ km barefoot from the Ganga at Sultanganj, carrying earthen pots of holy water on bamboo poles on their shoulders. They do not put the pots down until they pour the water directly on the Jyotirlinga. It is one of the world's largest annual human pilgrimages."
+      },
+      {
+        id: 10, name: "Nageshwar", planet: "Rahu–Saturn", planetColor: "#B090C8",
+        lat: 22.2, lon: 68.97, loc: "Dwarka · Gujarat",
+        med: {
+          day: "Saturday -  both Rahu and Saturn rule this day",
+          time: "Night -  the serpent realm is nocturnal",
+          mantra: "ॐ नमः शिवाय · ॐ नागेश्वराय नमः\nOm Namah Shivaya · Om Nageshwaraya Namah",
+          vis: "Sit in darkness. Feel what you fear most -  the primal fears without rational basis. The fear of betrayal, of hidden poison, of unseen enemies. Now visualise Shiva wearing the great serpent Vasuki as a garland. The serpent is comfortable around his neck. He is not bitten. The venom is present, but it cannot harm one who knows its nature. Be that one.",
+          reps: "108 repetitions -  the number of fears the serpent symbolises in tantric texts",
+          heals: "Sarpa Dosha, hidden enemies, paranoia, deep karmic debt, Rahu-Ketu axis afflictions, fear of betrayal"
+        },
+        tl: [
+          { y: "~5000 BCE?", e: "Dwarka civilisation -  oldest possible temple site near Krishna's legendary city", t: "ancient" },
+          { y: "Ancient", e: "Supriya the merchant's liberation narrated in Shiva Purana as the shrine's founding miracle", t: "ancient" },
+          { y: "9th c. CE", e: "Solanki dynasty patronage of Dwarka temples includes Nageshwar", t: "rebuild" },
+          { y: "1472 CE", e: "Mahmud Begada sacks Dwarka; most temples destroyed", t: "destruction" },
+          { y: "17th–18th c.", e: "Temple rebuilt; current structure largely dates from this period", t: "rebuild" },
+          { y: "Modern", e: "25-metre statue of Shiva added outside; marine archaeologists document ancient Dwarka ruins beneath the sea", t: "modern" }
+        ],
+        ancient: "Near Dwarka -  the golden city that Krishna built and then submerged beneath the sea when he left the world -  a temple whose linga faces west, toward the setting sun, toward the hidden. Ancient pilgrims said that at certain tides, the sound of serpents could be heard beneath the temple floor: the nagas of the deep earth, still circling the linga.",
+        modern: "Nageshwar sits a few kilometres from the Dwarka coast. The site includes a 25-metre statue of Shiva in meditation -  visible from miles away. The inner sanctum is simple, dark, and intense. Marine archaeologists have documented ruins of what may be Dwarka's ancient city beneath the nearby sea -  the mythological and the archaeological are unusually close here."
+      },
+      {
+        id: 11, name: "Rameshwaram", planet: "Sun + Mars", planetColor: "#F4A830",
+        lat: 9.3, lon: 79.3, loc: "Rameswaram Island · Tamil Nadu",
+        med: {
+          day: "Sunday (Sun) or Tuesday (Mars) -  or both combined",
+          time: "Sunrise, facing east toward Lanka across the sea",
+          mantra: "ॐ नमः शिवाय · ॐ रामेश्वराय नमः\nOm Namah Shivaya · Om Rameshwaraya Namah",
+          vis: "Sit at the edge of the sea (or visualise it). Feel the ocean between you and the thing you fought for. Feel the guilt of the good person -  the one who did what had to be done and still lives with it. Now visualise Lord Rama kneeling before the linga on this shore. The perfect king, bowing. If Rama needed to bow, so do we.",
+          reps: "12 repetitions (Sun) + 21 repetitions (Mars) -  in sequence",
+          heals: "Guilt after doing the right thing, Brahminicide dosha, leadership wounds, strained father-son bonds, Pitra Dosha"
+        },
+        tl: [
+          { y: "Treta Yuga", e: "Rama consecrates the Jyotirlinga here after the Lanka war (Ramayana / mythological time)", t: "ancient" },
+          { y: "Ancient", e: "Adam's Bridge / Rama Setu -  the chain of shoals connecting India to Sri Lanka, documented by NASA", t: "ancient" },
+          { y: "12th c. CE", e: "Ramanathaswamy temple construction begins under Pandya kings", t: "rebuild" },
+          { y: "17th c. CE", e: "Setupati kings build the 1,212-metre corridor -  the longest in any Hindu temple in the world", t: "rebuild" },
+          { y: "1931 CE", e: "APJ Abdul Kalam born in Rameswaram; credits this island's culture as foundational to his life", t: "modern" },
+          { y: "Present", e: "One of the four sacred Char Dhams; 22 ritual wells (tirthas) must be bathed in before entering sanctum", t: "modern" }
+        ],
+        ancient: "An island shrine at the uttermost south -  where the ocean narrowed and a bridge of stones and faith once carried an army across. The ancient pilgrims said the stones of Adam's Bridge could still be seen in clear shallow water at low tide. The world's longest temple corridor was built here so that the walk to the sanctum itself would be a meditation on Rama's long walk home.",
+        modern: "The Ramanathaswamy temple is an architectural marvel: its 1,212-metre corridor of carved pillars is the longest of any Hindu temple on earth. Pilgrims must bathe in all 22 sacred wells inside the complex before entering the sanctum -  a ritual taking several hours. The island is connected to the mainland by the 1914 Pamban Bridge. On a clear day, Sri Lanka is visible from the shore."
+      },
+      {
+        id: 12, name: "Grishneshwar", planet: "Venus + Ketu", planetColor: "#F4B8D4",
+        lat: 20.02, lon: 75.18, loc: "Aurangabad · Maharashtra",
+        med: {
+          day: "Friday (Venus) -  or any day of personal grief or loss",
+          time: "Any time; most powerfully at dusk",
+          mantra: "ॐ नमः शिवाय · ॐ घृष्णेश्वराय नमः\nOm Namah Shivaya · Om Ghrishneshwaraya Namah",
+          vis: "Visualise Kusuma by the lake in the early morning, immersing her 101 clay lingas one by one. She does not know what has happened yet. She is simply doing what she does every morning -  offering beauty to Shiva. Feel that quality of devotion: not the grand gesture, not the sacrifice, but the ordinary repeated act of love. Let it be enough. It is enough.",
+          reps: "101 repetitions -  in honour of Kusuma's 101 daily lingas",
+          heals: "Grief without cause, wounds of the heart, childlessness, capacity for mercy, 12th house afflictions, karmic completion and closure"
+        },
+        tl: [
+          { y: "7th–11th c.", e: "Ellora Caves carved nearby -  including the Kailasa Temple, greatest rock-cut structure in human history", t: "ancient" },
+          { y: "Ancient", e: "Kusuma's miracle (Puranic origin) -  the widow whose devotion and mercy created this shrine", t: "ancient" },
+          { y: "1316 CE", e: "Temple mentioned in Yadava dynasty copper plate inscriptions", t: "ancient" },
+          { y: "18th c. CE", e: "Temple fallen into disrepair under centuries of sultanate and Mughal control", t: "destruction" },
+          { y: "1730 CE", e: "Rebuilt by Ahalya Bai Holkar -  one of THREE Jyotirlingas she personally rebuilt (Somnath, Kashi, Grishneshwar)", t: "rebuild" },
+          { y: "1983 CE", e: "Ellora Caves (immediately adjacent) declared UNESCO World Heritage Site", t: "modern" },
+          { y: "Note", e: "Ahalya Bai Holkar is called Punyashloka -  the holy-versed queen -  for her single-handed restoration of Shiva's light", t: "modern" }
+        ],
+        ancient: "The last linga -  the final syllable of the cosmic mantra. In ancient pilgrimage literature, reaching Grishneshwar after the other eleven was described as arriving home after a long journey: not with triumph but with exhaustion transformed into peace. The lake beside the temple, where Kusuma's son walked out of the water, was said to have never dried in any drought, in any century.",
+        modern: "Grishneshwar today is a modest, beautifully maintained red-stone temple immediately adjacent to the Ellora Caves. The sacred lake (Shivalaya) is still there. Most visitors combine Grishneshwar with Ellora -  34 rock-cut caves carved between the 6th and 11th centuries, including the extraordinary Kailasa Temple (Cave 16). To end a Jyotirlinga pilgrimage at Grishneshwar and then stand inside the Kailasa Temple is to understand that Shiva's tenderness and Shiva's grandeur are the same thing."
+      }
+    ];
+
+    // ============================================================
+    //  INJECT TIMELINES + BEFORE/AFTER INTO EACH CARD
+    // ============================================================
+    document.querySelectorAll('.jl-card').forEach(card => {
+      const numEl = card.querySelector('.jl-number');
+      if (!numEl) return;
+      const id = parseInt(numEl.textContent.trim(), 10);
+      const d = SD.find(s => s.id === id);
+      if (!d) return;
+      const right = card.querySelector('.jl-right');
+      if (!right) return;
+
+      // --- BEFORE / AFTER ---
+      const ba = document.createElement('div');
+      ba.className = 'before-after';
+      ba.innerHTML = `
+    <div class="ba-tabs">
+      <button class="ba-tab active" data-target="ancient-${id}">📜 <span class="en">Ancient Vision</span><span class="hi">प्राचीन दृश्य</span></button>
+      <button class="ba-tab"        data-target="modern-${id}">🏛 <span class="en">Today</span><span class="hi">आज</span></button>
+    </div>
+    <div class="ba-content ancient-view active" id="ancient-${id}">
+      <div class="ba-tag">As described in ancient texts & oral tradition</div>
+      <p>${d.ancient}</p>
+    </div>
+    <div class="ba-content modern-view" id="modern-${id}">
+      <div class="ba-tag"><span class="en">What pilgrims experience today</span><span class="hi">आज तीर्थयात्री क्या अनुभव करते हैं</span></div>
+      <p>${d.modern}</p>
+    </div>`;
+      right.appendChild(ba);
+
+      ba.querySelectorAll('.ba-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          ba.querySelectorAll('.ba-tab').forEach(t => t.classList.remove('active'));
+          ba.querySelectorAll('.ba-content').forEach(c => c.classList.remove('active'));
+          tab.classList.add('active');
+          document.getElementById(tab.dataset.target).classList.add('active');
+        });
+      });
+
+      // --- TIMELINE ---
+      const tl = document.createElement('div');
+      tl.className = 'timeline-wrap';
+      const tlId = `tl-body-${id}`;
+      const typeLabel = { ancient: '🟡 Ancient/Mythic', destruction: '🔴 Destruction', rebuild: '🟢 Rebuilding', modern: '🔵 Modern' };
+      const items = d.tl.map(e => `
+    <div class="tl-item">
+      <div class="tl-year">${e.y}</div>
+      <div class="tl-dot ${e.t}"></div>
+      <div class="tl-text">${e.e}</div>
+    </div>`).join('');
+      tl.innerHTML = `
+    <button class="tl-toggle" onclick="this.classList.toggle('open');document.getElementById('${tlId}').classList.toggle('open')">
+      <em class="tl-arrow">▶</em> <span class="en">Temple History Timeline</span><span class="hi">मंदिर का इतिहास</span>
+    </button>
+    <div class="tl-body" id="${tlId}">
+      <div class="tl-track">${items}</div>
+      <div class="tl-legend">
+        ${Object.entries(typeLabel).map(([k, v]) => `<div class="tll-item"><div class="tll-dot" style="border-color:${k === 'ancient' ? '#C9A84C' : k === 'destruction' ? '#E07060' : k === 'rebuild' ? '#90D4A0' : '#A8C4E0'}"></div>${v}</div>`).join('')}
+      </div>
+    </div>`;
+      right.appendChild(tl);
+    });
+
+    // ============================================================
+    //  MEDITATION CARDS
+    // ============================================================
+    const medGrid = document.getElementById('medGrid');
+    if (medGrid) {
+      SD.forEach(d => {
+        const c = document.createElement('div');
+        c.className = 'med-card';
+        c.style.borderTopColor = d.planetColor;
+        c.innerHTML = `
+      <div class="med-head">
+        <div class="med-num">${String(d.id).padStart(2, '0')}</div>
+        <div class="med-title">
+          <h4>${d.name}</h4>
+          <div class="med-planet-lbl">${d.planet}</div>
+        </div>
+      </div>
+      <div class="med-row">
+        <div class="med-lbl"><span class="en">Best Day</span><span class="hi">सर्वोत्तम दिन</span></div>
+        <div class="med-val">${d.med.day}</div>
+      </div>
+      <div class="med-row">
+        <div class="med-lbl"><span class="en">Time</span><span class="hi">समय</span></div>
+        <div class="med-val">${d.med.time}</div>
+      </div>
+      <div class="med-row">
+        <div class="med-lbl"><span class="en">Mantra</span><span class="hi">मंत्र</span></div>
+        <div class="med-mantra">${d.med.mantra.replace(/\n/g, '<br>')}</div>
+      </div>
+      <div class="med-row">
+        <div class="med-lbl"><span class="en">Visualisation</span><span class="hi">ध्यान दृश्य</span></div>
+        <div class="med-val" style="font-size:13.5px;font-style:italic;opacity:0.8;">${d.med.vis}</div>
+      </div>
+      <div class="med-row">
+        <div class="med-lbl"><span class="en">Repetitions</span><span class="hi">जप संख्या</span></div>
+        <div class="med-val">${d.med.reps}</div>
+      </div>
+      <div class="med-row">
+        <div class="med-lbl"><span class="en">Heals</span><span class="hi">उपचार</span></div>
+        <div class="med-heal">${d.med.heals}</div>
+      </div>`;
+        medGrid.appendChild(c);
+      });
+    }
+
+  </script>
+
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-hi').classList.toggle('active', lang === 'hi');
+      // Apply Devanagari font to body in Hindi mode
+      if (lang === 'hi') {
+        document.body.style.fontFamily = "'Tiro Devanagari Sanskrit', 'Noto Serif Devanagari', Georgia, serif";
+      } else {
+        document.body.style.fontFamily = "'EB Garamond', Georgia, serif";
+      }
+    }
+    // Initialise
+    document.addEventListener('DOMContentLoaded', () => setLang('en'));
+  </script>
+
+</body>
+
+</html>
